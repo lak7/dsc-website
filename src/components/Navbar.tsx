@@ -2,12 +2,22 @@
 
 import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useBreakpointValue,
+  Box,
+} from "@chakra-ui/react";
 import Button from "./common/Button";
 
 const navItems = ["About", "Event Calendar", "Contact"];
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <div className="fixed w-full top-0 z-50 bg-black/20 backdrop-blur-lg">
@@ -21,51 +31,63 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white p-2"
-            >
-              {isMenuOpen ? (
-                <RiCloseLine className="h-6 w-6" />
-              ) : (
-                <RiMenu3Line className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          {!isMobile && (
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item, index) => (
                 <a
                   key={index}
                   href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
                 >
                   {item}
                 </a>
               ))}
             </div>
-          </div>
-        )}
+          )}
+
+          {/* Mobile Menu Button */}
+          {isMobile && (
+            <button
+              onClick={() => setIsDrawerOpen(true)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              <RiMenu3Line className="h-6 w-6" />
+            </button>
+          )}
+        </div>
       </nav>
+
+      {/* Drawer for Mobile Navigation */}
+      <Drawer
+        isOpen={isDrawerOpen}
+        placement="right"
+        onClose={() => setIsDrawerOpen(false)}
+      >
+        <DrawerOverlay />
+        <DrawerContent
+          bg="blackAlpha.700"
+          backdropFilter="blur(8px)"
+          color="white"
+        >
+          <DrawerCloseButton color="gray.300" />
+          <DrawerBody display="flex" flexDirection="column" pt={8}>
+            {navItems.map((item, index) => (
+              <Box
+                key={index}
+                as="a"
+                href={`#${item.toLowerCase()}`}
+                py={2}
+                px={3}
+                borderRadius="md"
+                _hover={{ bg: "whiteAlpha.300" }}
+                onClick={() => setIsDrawerOpen(false)}
+              >
+                {item}
+              </Box>
+            ))}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 };

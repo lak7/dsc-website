@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Orbitron, Rajdhani, Ubuntu } from "next/font/google";
 import NavBar from "@/components/Navbar";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
@@ -32,8 +33,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${orbitron.variable} ${rajdhani.variable} ${ubuntu.variable}`}
       >
-        <NavBar />
-        {children}
+        <ChakraProvider>
+          <NavBar />
+          {children}
+        </ChakraProvider>
       </body>
     </html>
   );
