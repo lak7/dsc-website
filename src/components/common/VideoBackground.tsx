@@ -1,6 +1,17 @@
-import React from "react";
+"use client";
+import { use } from "framer-motion/client";
+import { useState , useEffect} from "react";
+
 
 const VideoBackground = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if(!isClient) return null;
+
   return (
     <div className="absolute inset-0 w-full h-full z-0">
       <video
