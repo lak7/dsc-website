@@ -12,8 +12,15 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Button from "./common/Button";
+import Link from "next/link";
 
-const navItems = ["About", "Event Calendar", "Contact"];
+const navItems = [
+  { name: "Home", route: "/" },
+  { name: "About", route: "about" },
+  { name: "Event Calendar", route: "event-calendar" },
+  { name: "Contact", route: "contact" }
+];
+
 
 const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -34,13 +41,13 @@ const NavBar = () => {
           {!isMobile && (
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={`#${item.toLowerCase()}`}
+                  href={`/${item.route.toLowerCase()}`}
                   className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               ))}
             </div>
           )}
@@ -72,18 +79,18 @@ const NavBar = () => {
           <DrawerCloseButton color="gray.300" />
           <DrawerBody display="flex" flexDirection="column" pt={8}>
             {navItems.map((item, index) => (
-              <Box
-                key={index}
-                as="a"
-                href={`#${item.toLowerCase()}`}
-                py={2}
-                px={3}
-                borderRadius="md"
-                _hover={{ bg: "whiteAlpha.300" }}
-                onClick={() => setIsDrawerOpen(false)}
-              >
-                {item}
-              </Box>
+               <Link href={`/${item.route.toLowerCase()}`} key={index} passHref>
+                <Box
+                  as="div"
+                  py={2}
+                  px={3}
+                  borderRadius="md"
+                  _hover={{ bg: "whiteAlpha.300" }}
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  {item.name}
+                </Box>
+              </Link>
             ))}
           </DrawerBody>
         </DrawerContent>

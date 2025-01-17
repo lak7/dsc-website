@@ -14,7 +14,7 @@ import { TiLocationArrow } from "react-icons/ti";
 import VideoBackground from "./common/VideoBackground";
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className="h-dvh bg-black text-white/90 overflow-hidden font-light">

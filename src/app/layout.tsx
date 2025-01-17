@@ -31,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${inter.className} ${orbitron.variable} ${rajdhani.variable} ${ubuntu.variable}`}
       >
         <ChakraProvider>
