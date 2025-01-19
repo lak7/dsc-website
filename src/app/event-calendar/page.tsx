@@ -1,30 +1,26 @@
-
-import VideoBackground from '@/components/common/VideoBackground'
-import React from 'react'
-
+import VideoBackground from "@/components/common/VideoBackground";
+import React from "react";
+import SocietyTimelineDemo from "./EventTimeline";
 
 const page = () => {
-    return (
-        <div className="h-dvh bg-black text-white/90 overflow-hidden font-light">
-          <VideoBackground />
-    
-          {/* Main Content */}
-          <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col items-center justify-center px-4">
-            <div
-              
-              className="max-w-4xl mx-auto text-center px-4"
-            >
-              <div className="absolute left-0 top-0 z-40 size-full">
-                <div className="mt-24 px-5 sm:px-10">
-                  <h1 className="special-font hero-heading text-blue-100 text-left ">
-                    EV<b>EN</b>T <br /> CALE<b>ND</b>AR<br />
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </main>
+  return (
+    <div className="overflow-hidden">
+      <VideoBackground />
+      <main className="py-24">
+        <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 z-10 relative">
+          <h2 className="text-4xl md:text-6xl font-bold text-neutral-700 dark:text-neutral-200 mb-4">
+            Event Timeline
+          </h2>
+          <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Here's a look at the past events hosted by DSC BVCOE. We've had
+            workshops, hackathons, and competitions. Stay tuned for more
+            exciting events!
+          </p>
         </div>
-      );
-}
+        <SocietyTimelineDemo />
+      </main>
+    </div>
+  );
+};
 
-export default page
+export default page;
