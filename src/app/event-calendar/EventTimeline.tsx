@@ -8,7 +8,7 @@ export function SocietyTimelineDemo() {
     {
       title: "RRR – Reconceive, Rethink, Revise",
       content: (
-        <div>
+        <div className="mb-24">
           <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             A front-end development competition celebrating innovation and
             creativity. 41 teams competed across two rounds, with the top 20
@@ -49,7 +49,7 @@ export function SocietyTimelineDemo() {
     {
       title: "Game of Code 2.0",
       content: (
-        <div>
+        <div className="mb-24">
           <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Part of BVEST, DSC BVCOE and TechShuttle Society brought this
             two-stage coding challenge that tested technical expertise and
@@ -90,7 +90,7 @@ export function SocietyTimelineDemo() {
     {
       title: "Upcoming Events",
       content: (
-        <div>
+        <div className="mb-24">
           <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
             Stay tuned for more exciting events from DSC BVCOE! We're planning
             new challenges and learning opportunities.
