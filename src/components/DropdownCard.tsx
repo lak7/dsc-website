@@ -20,7 +20,7 @@ export function DropdownCard({ title, children }: DropdownCardProps) {
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger className="px-4 py-4 hover:no-underline">
-            <p className='font-semibold text-2xl'>{title}</p>
+            <p className='font-semibold text-[1.9rem]'>{title}</p>
           </AccordionTrigger>
           <AccordionContent>
             <CardContent>
