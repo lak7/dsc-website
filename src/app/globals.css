@@ -271,3 +271,66 @@ body {
     opacity: 0.8;
   }
 }
+
+
+footer {
+  background-color: rgba(17, 17, 17, 0.8);
+  color: #d1d5db; /* text-gray-300 */
+  padding-top: 3rem; /* py-8 px-4 */
+  position: relative;  /* Ensure it doesn't get hidden by other elements */
+  z-index: 10;  /* Make sure the footer is not hidden behind any other elements */
+}
+
+/* Social Media Icons styling */
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+footer .social-icons a {
+  font-size: 1.5rem; /* text-2xl */
+  color: #d1d5db; /* text-gray-300 */
+  transition: color 0.2s ease; /* transition-colors duration-200 */
+}
+
+footer .social-icons a:hover {
+  color: white;
+}
+
+
+footer .nav-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+footer .nav-links a {
+  font-size: 0.875rem; 
+  font-weight: 500; 
+  margin: 0 0.5rem; 
+  color: #d1d5db; 
+  transition: color 0.2s ease; 
+}
+
+footer .nav-links a:hover {
+  color: white;
+}
+
+
+footer .copyright {
+  text-align: center;
+}
+
+footer .copyright .year {
+  font-size: 0.875rem; 
+  color: #9ca3af; 
+  background-color: black;
+  width: 100%;
+  padding: 1rem 0rem;
+}
+
+footer .copyright .reserved {
+  font-size: 0.75rem; 
+  color: #6b7280; 
+}
