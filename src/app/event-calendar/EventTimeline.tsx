@@ -16,7 +16,7 @@ export function SocietyTimelineDemo() {
             ₹3,000.
           </p>
           <div className="grid grid-cols-2 gap-4">
-            <Link href="/events/rrr/winners">
+            <Link href="/event-calendar/RRR">
               <Image
                 src="/file.jpg"
                 alt="RRR Winners"
@@ -36,7 +36,7 @@ export function SocietyTimelineDemo() {
                 🥉 Team Drag & Drop
               </div>
               <Link
-                href="/events/rrr"
+                href="/event-calendar/RRR"
                 className="inline-block mt-4 text-blue-500 hover:text-blue-600 text-sm"
               >
                 View Full Details →
@@ -57,7 +57,7 @@ export function SocietyTimelineDemo() {
             institutions.
           </p>
           <div className="grid grid-cols-2 gap-4">
-            <Link href="/events/game-of-code">
+            <Link href="/event-calendar/GameOfCode">
               <Image
                 src="/code.png"
                 alt="Game of Code Event"
@@ -77,7 +77,7 @@ export function SocietyTimelineDemo() {
                 🥉 Hex Questers
               </div>
               <Link
-                href="/events/game-of-code"
+                href="/event-calendar/GameOfCode"
                 className="inline-block mt-4 text-blue-500 hover:text-blue-600 text-sm"
               >
                 View Full Details →

@@ -18,9 +18,8 @@ const navItems = [
   { name: "Home", route: "/" },
   { name: "About", route: "about" },
   { name: "Event Calendar", route: "event-calendar" },
-  { name: "Contact", route: "contact" }
+  { name: "Contact", route: "contact" },
 ];
-
 
 const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -79,7 +78,7 @@ const NavBar = () => {
           <DrawerCloseButton color="gray.300" />
           <DrawerBody display="flex" flexDirection="column" pt={8}>
             {navItems.map((item, index) => (
-               <Link href={`/${item.route.toLowerCase()}`} key={index} passHref>
+              <Link href={`/${item.route.toLowerCase()}`} key={index} passHref>
                 <Box
                   as="div"
                   py={2}
