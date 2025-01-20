@@ -4,6 +4,7 @@ import "./globals.css";
 import { Orbitron, Rajdhani, Ubuntu } from "next/font/google";
 import NavBar from "@/components/Navbar";
 import { ChakraProvider } from "@chakra-ui/react";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
@@ -37,6 +38,7 @@ export default function RootLayout({
         <ChakraProvider>
           <NavBar />
           {children}
+          <Footer />
         </ChakraProvider>
       </body>
     </html>
