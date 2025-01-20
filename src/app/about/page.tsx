@@ -1,4 +1,4 @@
-import { VideoBackground3 } from "@/components/common/VideoBackground";
+import VideoBackground from "@/components/common/VideoBackground";
 import { CoreTeam, Departments } from "@/constants/teamdata";
 import { DropdownCard } from "@/components/DropdownCard";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="h-dvh bg-black text-white/90 overflow-y-auto font-light">
-      <VideoBackground3 />
+      <VideoBackground />
 
       {/* Main Content */}
       <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col px-4 sm:px-10">
