@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       <VideoBackground />
-      <main className="pt-16">
+      <main className="pt-16 z-10 relative">
         <div className="mx-auto py-20 px-4 md:px-8 lg:px-10 z-10 relative">
           <div className="special-font hero-heading text-blue-100 text-left text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
             E<b>VEN</b>T TI<b>MEL</b>INE <br />
