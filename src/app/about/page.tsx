@@ -4,6 +4,7 @@ import { DropdownCard } from "@/components/DropdownCard";
 import Image from "next/image";
 import { AnimatedTestimonialsDemo } from "./Core";
 
+
 const page = () => {
   return (
     <div className="h-dvh bg-black text-white/90 overflow-y-auto font-light">
