@@ -11,14 +11,14 @@ import DistopianCircuit from "./common/DistopianCircuit";
 import ScanlineEffect from "./common/ScanlineEffect";
 import TypewriterText from "./common/TypewriterText";
 import { TiLocationArrow } from "react-icons/ti";
-import { VideoBackground2 } from "./common/VideoBackground";
+import VideoBackground from "./common/VideoBackground";
 
 export default function Home() {
   // const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className="h-dvh bg-black text-white/90 overflow-hidden font-light">
-      <VideoBackground2 />
+      <VideoBackground />
 
       {/* Main Content */}
       <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col items-center justify-center px-4">

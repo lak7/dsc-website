@@ -1,11 +1,11 @@
-import VideoBackground from "@/components/common/VideoBackground";
+import { VideoBackground2 } from "@/components/common/VideoBackground";
 import React from "react";
 import SocietyTimelineDemo from "./EventTimeline";
 
 const page = () => {
   return (
     <div>
-      <VideoBackground />
+      <VideoBackground2 />
       <main className="pt-16 z-10 relative">
         <div className="mx-auto py-20 px-4 md:px-8 lg:px-10 z-10 relative">
           <div className="special-font hero-heading text-blue-100 text-left text-4xl md:text-6xl lg:text-7xl font-bold mb-4">

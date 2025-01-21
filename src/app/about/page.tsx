@@ -1,12 +1,13 @@
-import VideoBackground from "@/components/common/VideoBackground";
+import { VideoBackground3 } from "@/components/common/VideoBackground";
 import { CoreTeam, Departments } from "@/constants/teamdata";
 import { DropdownCard } from "@/components/DropdownCard";
 import Image from "next/image";
+import { AnimatedTestimonialsDemo } from "./Core";
 
 const page = () => {
   return (
     <div className="h-dvh bg-black text-white/90 overflow-y-auto font-light">
-      <VideoBackground />
+      <VideoBackground3 />
 
       {/* Main Content */}
       <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col px-4 sm:px-10">
@@ -19,21 +20,38 @@ const page = () => {
             </div>
           </div>
         </div>
-     
+        <h1 className="text-7xl font-bold z-10 px-5 mt-20 text-center ">
+          Meet Our Core
+        </h1>
+        <div>
+          <AnimatedTestimonialsDemo />
+        </div>
+
         <h1 className="text-7xl font-bold z-10 px-5 mt-20 text-center ">
           Our Departments
         </h1>
         <div className="z-50 mt-20 w-full flex flex-col items-center gap-10 mb-10 ">
           {Departments.map((dept) => (
-            <div key={dept.name} className="w-3/4 duration-300 lg:w-full bg-gray-900">
+            <div
+              key={dept.name}
+              className="w-3/4 duration-300 lg:w-full bg-gray-900"
+            >
               <DropdownCard title={dept.name}>
-                <p className="text-xl font-medium my-3 italic">Role : {dept.description}</p>
+                <p className="text-xl font-medium my-3 italic">
+                  Role : {dept.description}
+                </p>
                 <div className="flex flex-col w-full justify-between items-center">
                   <figure className="w-full">
                     <figcaption className="text-3xl font-semibold my-5 text-yellow-400">
                       Heads
                     </figcaption>
-                    <ul className={`flex items-center justify-center gap-5  ${dept.Heads.length > 2 ? "flex-col lg:flex-row" : "flex-col md:flex-row"} `}>
+                    <ul
+                      className={`flex items-center justify-center gap-5  ${
+                        dept.Heads.length > 2
+                          ? "flex-col lg:flex-row"
+                          : "flex-col md:flex-row"
+                      } `}
+                    >
                       {dept.Heads?.map((head) => (
                         <li
                           key={head}
@@ -60,7 +78,9 @@ const page = () => {
                       <ul className="flex flex-col gap-1">
                         {dept.Executives?.map((Exc) => (
                           <li key={Exc} className="mx-4 flex">
-                            <p className="text-2xl w-full font-medium text-center ">{Exc}</p>
+                            <p className="text-2xl w-full font-medium text-center ">
+                              {Exc}
+                            </p>
                           </li>
                         ))}
                       </ul>
@@ -73,7 +93,9 @@ const page = () => {
                       <ul className="flex flex-col gap-1">
                         {dept.Volunteers?.map((Vol) => (
                           <li key={Vol} className="mx-4 flex ">
-                            <p className="text-2xl font-medium w-full text-center ">{Vol}</p>
+                            <p className="text-2xl font-medium w-full text-center ">
+                              {Vol}
+                            </p>
                           </li>
                         ))}
                       </ul>

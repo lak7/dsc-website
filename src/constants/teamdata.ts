@@ -1,12 +1,22 @@
 const CoreTeam = {
   description: "The driving force behind the team, ensuring leadership and strategic oversight.",
   members: [
-    { name: "Shivansh Das", role: "Lead" },
-    { name: "Kashish Tyagi", role: "Vice-Lead" },
-    { name: "Aayush Raj", role: "Creative Lead" },
-    { name: "Paanav Puri", role: "Event Management Lead" },
-    { name: "Mayank Goel", role: "Sponsorship Lead" },
-    { name: "Lakshay Gupta", role: "Technical Lead" }
+    { name: "Shivansh Das", 
+      role:"Lead", 
+      description:"As the Lead of the DSC, Shivansh takes charge of driving the society's mission to foster a tech-driven community, leading a range of innovative projects and initiatives. His strong leadership, organizational, and problem-solving abilities enable him to effectively steer the team towards success and impactful outcomes." },
+    { name: "Kashish Tyagi", 
+      role: "Vice-Lead" ,
+      description : "Kashish is a true visionary, and she blends creativity with technical acumen, bringing fresh perspectives to innovative projects. As the Vice Lead of DSC, Kashish is eager to collaborate and drive technological advancement."},
+    { name: "Aayush Raj", role: "Creative Lead" , description: "Aayush, as the Creative Lead for DSC, combines his technical skills with a strong creative vision.With a deep passion for design and innovation, Aayush leads the creative direction of the society’s projects, ensuring that every initiative is visually captivating and impactful."},
+    { name: "Paanav Puri", 
+      role: "Event Management Lead", 
+      description: "As the Event Management Lead for DSC, Paanav excels in planning and executing impactful events that foster learning and collaboration among tech enthusiasts. His dedication to teamwork and meticulous attention to detail ensure the success of every initiative he undertakes, driving the vision of the society forward."},
+    { name: "Mayank Goel", 
+      role: "Sponsorship Lead" ,
+      description : "Mayank brings his strategic mindset and persuasive communication skills to his role as the Sponsorship Lead for DSC. With a passion for fostering partnerships and driving mutual growth, Mayank excels at building relationships with sponsors to support the society’s initiatives."},
+    { name: "Lakshay Gupta", 
+      role: "Technical Lead",
+      description: "As the Technical Lead for DSC, Lakshay plays a pivotal role in driving the technical direction of the society's projects, utilizing his strong foundation in programming and development.His collaborative approach and deep technical expertise make him an integral part of the team." }
   ]
 };
 
