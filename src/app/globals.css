@@ -330,7 +330,48 @@ footer .copyright .year {
   padding: 1rem 0rem;
 }
 
-footer .copyright .reserved {
-  font-size: 0.75rem; 
-  color: #6b7280; 
+
+@media (max-width: 768px) {
+  footer {
+    padding-top: 1.5rem;
+  }
+
+  footer .nav-links a,
+  footer .social-icons a {
+    font-size: 0.875rem; /* text-sm */
+  }
+
+  footer .social-icons {
+    margin-bottom: 1rem;
+  }
+  .bento-title {
+    font-size: 2.5rem; /* md:text-4xl */
+    margin: 0 1rem;
+  }
+
+  .bento-tilt_1 {
+    margin: 0 1rem;
+  }
+
+  .bento-tilt_2 {
+    margin: 0 1rem;
+  }
+}
+@media (max-width: 480px) {
+  footer .nav-links a {
+    margin: 0;
+    font-size: 0.7rem; /* text-xs */
+  }
+  .bento-title {
+    font-size: 2rem; /* sm:text-3xl */
+    margin: 0 0.5rem;
+  }
+
+  .bento-tilt_1 {
+    margin: 0 0.5rem;
+  }
+
+  .bento-tilt_2 {
+    margin: 0 0.5rem;
+  }
 }
