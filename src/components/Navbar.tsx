@@ -15,7 +15,6 @@ import Button from "./common/Button";
 import Link from "next/link";
 
 const navItems = [
-  { name: "Home", route: "/" },
   { name: "About", route: "about" },
   { name: "Event Calendar", route: "event-calendar" },
   { name: "Contact", route: "contact" },
@@ -30,11 +29,13 @@ const NavBar = () => {
       <nav className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-3xl sm:text-5xl font-medium text-white tracking-wider">
-              {"{;}"}
-            </span>
-          </div>
+          <Link href={"/"}>
+            <div className="flex-shrink-0">
+              <span className="text-3xl sm:text-5xl font-medium text-white tracking-wider">
+                {"{;}"}
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           {!isMobile && (
