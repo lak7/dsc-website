@@ -1,33 +1,25 @@
-import { VideoBackground3 } from "@/components/common/VideoBackground";
-import { CoreTeam, Departments } from "@/constants/teamdata";
+import VideoBackground from "@/components/common/VideoBackground";
+import { Departments } from "@/constants/teamdata";
 import { DropdownCard } from "@/components/DropdownCard";
 import Image from "next/image";
 import { AnimatedTestimonialsDemo } from "./Core";
-
+import TeamGrid from "./Core2";
 
 const page = () => {
   return (
     <div className="h-dvh bg-black text-white/90 overflow-y-auto font-light">
-      <VideoBackground3 />
-
+      <VideoBackground />
       {/* Main Content */}
       <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col px-4 sm:px-10">
         <div className="max-w-4xl px-4 ">
           <div className="z-40 size-full">
-            <div className="mt-24 px- ">
+            <div className="mt-24 px-2">
               <h1 className="special-font hero-heading text-blue-100 text-left ">
                 A<b>BO</b>UT <br /> PA<b>G</b>E <br />
               </h1>
             </div>
           </div>
         </div>
-        <h1 className="text-7xl font-bold z-10 px-5 mt-20 text-center ">
-          Meet Our Core
-        </h1>
-        <div>
-          <AnimatedTestimonialsDemo />
-        </div>
-
         <h1 className="text-7xl font-bold z-10 px-5 mt-20 text-center ">
           Our Departments
         </h1>

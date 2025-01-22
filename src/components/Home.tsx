@@ -12,6 +12,7 @@ import ScanlineEffect from "./common/ScanlineEffect";
 import TypewriterText from "./common/TypewriterText";
 import { TiLocationArrow } from "react-icons/ti";
 import VideoBackground from "./common/VideoBackground";
+import TeamGrid from "@/app/about/Core2";
 
 export default function Home() {
   // const [isHovered, setIsHovered] = useState(false);
