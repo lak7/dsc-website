@@ -3,7 +3,7 @@ import { FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 const Linkedin = () => {
   return (
     <a
-      href="https://in.linkedin.com"
+      href="https://www.linkedin.com/company/dsc-bvp/posts/?feedView=all"
       target="_blank"
       rel="noopener noreferrer"
       className="text-4xl text-pink-500 hover:text-pink-700"
@@ -17,7 +17,7 @@ const Linkedin = () => {
 const Instagram = () => {
   return (
     <a
-      href="https://www.instagram.com"
+      href="https://www.instagram.com/gdscbvp"
       target="_blank"
       rel="noopener noreferrer"
       className="text-4xl text-pink-500 hover:text-pink-700"
@@ -31,7 +31,7 @@ const Instagram = () => {
 const Twitter = () => {
   return (
     <a
-      href="https://twitter.com"
+      href="https://x.com/dsc_bvp"
       target="_blank"
       rel="noopener noreferrer"
       className="text-4xl text-pink-500 hover:text-pink-700"
