@@ -26,12 +26,12 @@ const NavBar = () => {
 
   return (
     <div className="fixed w-full top-0 z-50 bg-black/20 backdrop-blur-lg">
-      <nav className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-5">
-        <div className="flex items-center justify-between h-16">
+      <nav className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4">
+        <div className="flex items-center justify-between h-10 md:h-14">
           {/* Logo */}
           <Link href={"/"}>
             <div className="flex-shrink-0">
-              <span className="text-3xl sm:text-5xl font-medium text-white tracking-wider">
+              <span className="text-2xl sm:text-4xl font-medium text-white tracking-wider">
                 {"{;}"}
               </span>
             </div>
@@ -39,7 +39,7 @@ const NavBar = () => {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item, index) => (
                 <Link
                   key={index}
@@ -58,7 +58,7 @@ const NavBar = () => {
               onClick={() => setIsDrawerOpen(true)}
               className="text-gray-300 hover:text-white p-2"
             >
-              <RiMenu3Line className="h-6 w-6" />
+              <RiMenu3Line className="h-5 w-5" />
             </button>
           )}
         </div>
@@ -77,13 +77,13 @@ const NavBar = () => {
           color="white"
         >
           <DrawerCloseButton color="gray.300" />
-          <DrawerBody display="flex" flexDirection="column" pt={8}>
+          <DrawerBody display="flex" flexDirection="column" pt={6} pb={4}>
             {navItems.map((item, index) => (
               <Link href={`/${item.route.toLowerCase()}`} key={index} passHref>
                 <Box
                   as="div"
-                  py={2}
-                  px={3}
+                  py={3}
+                  px={4}
                   borderRadius="md"
                   _hover={{ bg: "whiteAlpha.300" }}
                   onClick={() => setIsDrawerOpen(false)}

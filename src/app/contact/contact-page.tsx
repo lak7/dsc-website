@@ -1,5 +1,5 @@
 "use client";
-import { Linkedin, Instagram } from "@/components/common/SocialMedia";
+import { Linkedin, Instagram, Twitter } from "@/components/common/SocialMedia";
 import { useState } from "react";
 
 const ContactUs: React.FC = () => {
@@ -48,10 +48,8 @@ const ContactUs: React.FC = () => {
     <div className="min-h-screen bg-black text-white font-light">
       <div className=" min-h-screen bg-black text-white font-light ">
         {/* Heading */}
-        <h1 className="special-font text-blue-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-12  text-center">
-          <b>
-            C O N T A C T <br /> P A G E
-          </b>
+        <h1 className=" pt-[60px] sm:pt-[70px] md:pt-[85px] lg:pt-[95px] hero-heading  text-blue-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-12  text-center">
+          <b>C O N T A C T</b>
         </h1>
 
         {/* Content Section */}
@@ -73,6 +71,7 @@ const ContactUs: React.FC = () => {
                 <div className="flex space-x-4">
                   <Linkedin />
                   <Instagram />
+                  <Twitter />
                 </div>
               </div>
             </div>
