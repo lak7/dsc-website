@@ -15,10 +15,10 @@ export default function TeamGrid() {
   const regularMembers = teamMembers.filter((member) => !member.featured);
 
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="bg-black min-h-screen py-12 px-4">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-white text-center mb-12 tracking-tight">
-          MEET OUR TEAM
+          MEET OUR FACULTY INCHARGE
         </h1>
 
         <div className="flex flex-col items-center space-y-12">
@@ -54,6 +54,9 @@ export default function TeamGrid() {
               </div>
             </div>
           )}
+          <h1 className="text-4xl font-bold text-white text-center mb-12 tracking-tight">
+            MEET OUR CORE
+          </h1>
 
           {/* Regular Team Members Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
@@ -66,7 +69,6 @@ export default function TeamGrid() {
                 <div className="relative">
                   {/* Arch frame */}
                   <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-[calc(100%+2px)] h-[calc(100%+2px)] bg-white/10 rounded-t-full" />
-
                   {/* Circle container */}
                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-t-full overflow-hidden relative border-2 border-white/10">
                     <Image
@@ -95,11 +97,14 @@ export default function TeamGrid() {
           open={!!selectedMember}
           onOpenChange={() => setSelectedMember(null)}
         >
-          <DialogContent className="sm:max-w-[425px]">
+          <DialogContent
+            className=" sm:max-w-[425px]"
+            style={{ backgroundColor: "cornflowerblue" }}
+          >
             {selectedMember && (
               <>
                 <DialogHeader>
-                  <DialogTitle className="text-xl font-bold">
+                  <DialogTitle className=" text-xxl font-bold">
                     {selectedMember.name}
                   </DialogTitle>
                 </DialogHeader>
