@@ -19,10 +19,9 @@ export default function Home() {
 
   return (
     <div className="h-dvh bg-black text-white/90 overflow-hidden font-light">
-      <VideoBackground />
-
       {/* Main Content */}
       <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col items-center justify-center px-4">
+        <VideoBackground />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

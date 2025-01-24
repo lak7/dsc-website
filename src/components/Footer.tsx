@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Linkedin, Instagram, Twitter } from "./common/SocialMedia";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -23,33 +24,22 @@ const Footer = () => {
 
   return (
     <Box as="footer">
-
       <Flex justify="center" mb={4} className="social-icons">
         <HStack spacing={6}>
-          <Link href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-blue-600 hover:text-blue-800" aria-label="Instagram">
-            <FaInstagram />
-          </Link>
-          <Link href="https://in.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-pink-500 hover:text-pink-700" aria-label="LinkedIn">
-            <FaLinkedin />
-          </Link>
+          <Instagram />
+          <Linkedin />
+          <Twitter />
         </HStack>
       </Flex>
-
 
       <Flex justify="center" mb={4} className="nav-links">
         <HStack spacing={4}>
           {["Home", "About", "Event Calendar", "Contact"].map((item, index) => (
             <Link
-            key={index}
-            href={`/${item.toLowerCase().replace(" ", "-")}`}
-            className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
-          >
+              key={index}
+              href={`/${item.toLowerCase().replace(" ", "-")}`}
+              className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+            >
               {item}
             </Link>
           ))}
@@ -61,7 +51,14 @@ const Footer = () => {
           Copyright &copy; 2025; Developer Students Club
         </Text>
         {isMobile && (
-          <Text fontSize="xs" color="gray.500" mt="0" bg="black" w="full" pb="0.5rem">
+          <Text
+            fontSize="xs"
+            color="gray.500"
+            mt="0"
+            bg="black"
+            w="full"
+            pb="0.5rem"
+          >
             All rights reserved.
           </Text>
         )}
