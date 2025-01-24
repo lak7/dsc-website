@@ -23,7 +23,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <Box as="footer">
+    <Box as="footer" className="bg-neutral-950">
       <Flex justify="center" mb={4} className="social-icons">
         <HStack spacing={6}>
           <Instagram />

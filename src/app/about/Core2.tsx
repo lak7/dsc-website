@@ -8,6 +8,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { TeamMember, teamMembers } from "@/constants/teamdata";
+import { motion } from "framer-motion";
+import VideoBackground from "@/components/common/VideoBackground";
 
 export default function TeamGrid() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
@@ -15,81 +17,110 @@ export default function TeamGrid() {
   const regularMembers = teamMembers.filter((member) => !member.featured);
 
   return (
-    <div className="bg-black min-h-screen py-12 px-4">
-      <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-white text-center mb-12 tracking-tight">
-          MEET OUR FACULTY INCHARGE
-        </h1>
+    <div className="relative bg-black min-h-screen py-16 px-4 overflow-hidden">
+      <VideoBackground />
+      <div className="absolute inset-0 bg-black/50" />{" "}
+      {/* Overlay for readability */}
+      <div className="container mx-auto relative z-10">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl font-bold text-white/90 text-center mb-16 tracking-tight"
+        >
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+            MEET OUR FACULTY INCHARGE
+          </span>
+        </motion.h1>
 
-        <div className="flex flex-col items-center space-y-12">
+        <div className="flex flex-col items-center space-y-20">
           {/* Featured Team Member */}
           {featuredMember && (
-            <div
-              className="relative cursor-pointer group"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="relative cursor-pointer group w-64 h-64 md:w-80 md:h-80"
               onClick={() => setSelectedMember(featuredMember)}
             >
-              <div className="relative">
-                {/* Arch frame */}
-                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-[calc(100%+2px)] h-[calc(100%+2px)] bg-white/10 rounded-t-full" />
+              <div className="relative w-full h-full">
+                {/* Glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl opacity-50 group-hover:opacity-75 blur transition duration-1000 group-hover:duration-200" />
 
-                {/* Circle container */}
-                <div className="w-48 h-48 md:w-64 md:h-64 rounded-t-full overflow-hidden relative border-2 border-white/10">
+                {/* Square container */}
+                <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 transition-all duration-300 group-hover:border-white/20">
                   <Image
                     src={featuredMember.imageUrl || "/placeholder.svg"}
                     alt={featuredMember.name}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-white font-semibold text-lg">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="text-white/90 font-bold text-2xl mb-2">
                         {featuredMember.name}
                       </p>
-                      <p className="text-gray-200 text-sm">
+                      <p className="text-blue-300/90 text-lg">
                         {featuredMember.role}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
-          <h1 className="text-4xl font-bold text-white text-center mb-12 tracking-tight">
-            MEET OUR CORE
-          </h1>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl font-bold text-center mb-16 tracking-tight"
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+              MEET OUR CORE
+            </span>
+          </motion.h1>
 
           {/* Regular Team Members Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-            {regularMembers.map((member) => (
-              <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.1 }}
+            className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto"
+          >
+            {regularMembers.map((member, index) => (
+              <motion.div
                 key={member.id}
-                className="relative cursor-pointer group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="relative cursor-pointer group w-40 h-40 md:w-56 md:h-56 mx-auto"
                 onClick={() => setSelectedMember(member)}
               >
-                <div className="relative">
-                  {/* Arch frame */}
-                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-[calc(100%+2px)] h-[calc(100%+2px)] bg-white/10 rounded-t-full" />
-                  {/* Circle container */}
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-t-full overflow-hidden relative border-2 border-white/10">
+                <div className="relative w-full h-full">
+                  {/* Glow effect */}
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl opacity-0 group-hover:opacity-50 blur transition duration-1000 group-hover:duration-200" />
+
+                  {/* Square container */}
+                  <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 transition-all duration-300 group-hover:border-white/20">
                     <Image
                       src={member.imageUrl || "/placeholder.svg"}
                       alt={member.name}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="text-center">
-                        <p className="text-white font-semibold text-sm">
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-white/90 font-bold text-lg mb-1">
                           {member.name}
                         </p>
-                        <p className="text-gray-200 text-xs">{member.role}</p>
+                        <p className="text-blue-300/90 text-sm">
+                          {member.role}
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Team Member Details Modal */}
@@ -97,23 +128,21 @@ export default function TeamGrid() {
           open={!!selectedMember}
           onOpenChange={() => setSelectedMember(null)}
         >
-          <DialogContent
-            className=" sm:max-w-[425px]"
-            style={{ backgroundColor: "cornflowerblue" }}
-          >
+          <DialogContent className="sm:max-w-[425px] bg-black/95 border border-white/10">
             {selectedMember && (
-              <>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
                 <DialogHeader>
-                  <DialogTitle className=" text-xxl font-bold">
+                  <DialogTitle className="text-2xl font-bold text-white/90">
                     {selectedMember.name}
                   </DialogTitle>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
+                <div className="grid gap-6 py-6">
                   <div className="relative">
-                    {/* Arch frame */}
-
-                    {/* Circle container */}
-                    <div className="relative w-32 h-32 mx-auto rounded-t-full overflow-hidden border-2 border-white/10">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl opacity-30 blur" />
+                    <div className="relative w-48 h-48 mx-auto rounded-3xl overflow-hidden border border-white/10">
                       <Image
                         src={selectedMember.imageUrl || "/placeholder.svg"}
                         alt={selectedMember.name}
@@ -122,16 +151,16 @@ export default function TeamGrid() {
                       />
                     </div>
                   </div>
-                  <div className="text-center">
-                    <h2 className="font-large text-primary text-white">
+                  <div className="text-center px-4">
+                    <h2 className="text-xl font-semibold text-blue-300/90 mb-2">
                       {selectedMember.role}
                     </h2>
-                    <p className="mt-2 text-muted-foreground text-white">
+                    <p className="text-white/80 leading-relaxed">
                       {selectedMember.bio}
                     </p>
                   </div>
                 </div>
-              </>
+              </motion.div>
             )}
           </DialogContent>
         </Dialog>

@@ -9,7 +9,7 @@ const Page = () => {
     <main>
       <Home />
       <Features />
-      <TeamGrid/>
+      <TeamGrid />
     </main>
   );
 };
