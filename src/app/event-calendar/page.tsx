@@ -9,7 +9,7 @@ import SocietyTimelineDemo from "./EventTimeline";
 const page = () => {
   return (
     <div className="min-h-dvh bg-[#0A0A0F] text-white/90 overflow-y-auto font-light">
-      <VideoBackground5 />
+      {/* <VideoBackground5 /> */}
 
       {/* Hero Section */}
       <main className="relative z-10">
@@ -33,7 +33,7 @@ const page = () => {
           </div>
 
           {/* Timeline Component */}
-          <div className="pb-20">
+          <div className="pb-10">
             <SocietyTimelineDemo />
           </div>
         </div>

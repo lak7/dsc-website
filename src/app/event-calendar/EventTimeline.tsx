@@ -87,34 +87,34 @@ export function SocietyTimelineDemo() {
         </div>
       ),
     },
-    {
-      title: "Upcoming Events",
-      content: (
-        <div className="mb-24">
-          <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Stay tuned for more exciting events from DSC BVCOE! We're planning
-            new challenges and learning opportunities.
-          </p>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-              📅 Technical Workshops
-            </div>
-            <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-              📅 Coding Competitions
-            </div>
-            <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-              📅 Hackathons
-            </div>
-          </div>
-          <Link
-            href="/events/upcoming"
-            className="inline-block text-blue-500 hover:text-blue-600 text-sm"
-          >
-            Check Our Event Calendar →
-          </Link>
-        </div>
-      ),
-    },
+    // {
+    //   title: "Upcoming Events",
+    //   content: (
+    //     <div className="mb-24">
+    //       <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+    //         Stay tuned for more exciting events from DSC BVCOE! We're planning
+    //         new challenges and learning opportunities.
+    //       </p>
+    //       <div className="mb-8">
+    //         <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
+    //           📅 Technical Workshops
+    //         </div>
+    //         <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
+    //           📅 Coding Competitions
+    //         </div>
+    //         <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
+    //           📅 Hackathons
+    //         </div>
+    //       </div>
+    //       <Link
+    //         href="/events/upcoming"
+    //         className="inline-block text-blue-500 hover:text-blue-600 text-sm"
+    //       >
+    //         Check Our Event Calendar →
+    //       </Link>
+    //     </div>
+    //   ),
+    // },
   ];
 
   return (

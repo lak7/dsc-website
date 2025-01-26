@@ -15,7 +15,9 @@ import Button from "./common/Button";
 import Link from "next/link";
 
 const navItems = [
+  { name: "Upcoming Event", route: "/upcoming-event", disabled: true },
   { name: "About", route: "about" },
+  { name: "About 2", route: "about-2" },
   { name: "Event Calendar", route: "event-calendar" },
   { name: "Contact", route: "contact" },
 ];
@@ -40,15 +42,24 @@ const NavBar = () => {
           {/* Desktop Navigation */}
           {!isMobile && (
             <div className="hidden md:flex items-center space-x-6">
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={`/${item.route.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item, index) =>
+                item.disabled ? (
+                  <span
+                    key={index}
+                    className="text-gray-500 cursor-not-allowed"
+                  >
+                    {item.name}
+                  </span>
+                ) : (
+                  <Link
+                    key={index}
+                    href={`/${item.route.toLowerCase()}`}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
             </div>
           )}
 
