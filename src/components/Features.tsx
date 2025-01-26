@@ -97,7 +97,7 @@ const Features = () => (
           empower students to connect with peers, learn emerging technologies,
           and build impactful solutions for real-world challenges.
         </p> */}
-        <h1 className="text-9xl font-zentry font-black text-blue-50">
+        <h1 className="text-9xl max-lg:text-5xl font-zentry font-black text-blue-50">
           OUR THREE PILLARS
         </h1>
       </div>
