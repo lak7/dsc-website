@@ -69,7 +69,7 @@ body {
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-5xl md:text-6xl lg:text-[10rem];
   }
 
   .about-subtext {
@@ -272,13 +272,12 @@ body {
   }
 }
 
-
 footer {
   background-color: rgba(17, 17, 17, 0.8);
   color: #d1d5db; /* text-gray-300 */
   padding-top: 3rem; /* py-8 px-4 */
-  position: relative;  /* Ensure it doesn't get hidden by other elements */
-  z-index: 10;  /* Make sure the footer is not hidden behind any other elements */
+  position: relative; /* Ensure it doesn't get hidden by other elements */
+  z-index: 10; /* Make sure the footer is not hidden behind any other elements */
 }
 
 /* Social Media Icons styling */
@@ -298,7 +297,6 @@ footer .social-icons a:hover {
   color: white;
 }
 
-
 footer .nav-links {
   display: flex;
   justify-content: center;
@@ -306,30 +304,28 @@ footer .nav-links {
 }
 
 footer .nav-links a {
-  font-size: 0.875rem; 
-  font-weight: 500; 
-  margin: 0 0.5rem; 
-  color: #d1d5db; 
-  transition: color 0.2s ease; 
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  color: #d1d5db;
+  transition: color 0.2s ease;
 }
 
 footer .nav-links a:hover {
   color: white;
 }
 
-
 footer .copyright {
   text-align: center;
 }
 
 footer .copyright .year {
-  font-size: 0.875rem; 
-  color: #9ca3af; 
+  font-size: 0.875rem;
+  color: #9ca3af;
   background-color: black;
   width: 100%;
   padding: 1rem 0rem;
 }
-
 
 @media (max-width: 768px) {
   footer {

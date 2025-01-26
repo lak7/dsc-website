@@ -1,10 +1,12 @@
 "use client";
+import { motion } from "framer-motion";
 import { useState, useRef, ReactNode, MouseEvent } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 
 interface BentoTiltProps {
   children: ReactNode;
   className?: string;
+  isLeft?: boolean;
 }
 
 interface BentoCardProps {
@@ -14,7 +16,11 @@ interface BentoCardProps {
   isComingSoon?: boolean;
 }
 
-export const BentoTilt = ({ children, className = "" }: BentoTiltProps) => {
+export const BentoTilt = ({
+  children,
+  className = "",
+  isLeft = false,
+}: BentoTiltProps) => {
   const [transformStyle, setTransformStyle] = useState("");
   const itemRef = useRef<HTMLDivElement>(null);
 
@@ -39,15 +45,18 @@ export const BentoTilt = ({ children, className = "" }: BentoTiltProps) => {
   };
 
   return (
-    <div
+    <motion.div
       ref={itemRef}
+      initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.5 }}
       className={className}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform: transformStyle }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
@@ -81,16 +90,22 @@ export const BentoCard = ({
 const Features = () => (
   <section className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32">
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
+      <div className="px-5 py-20">
+        {/* <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
           Developer Student Club (DSC) BVCOE, is a dynamic community of tech
           enthusiasts committed to fostering innovation and collaboration. We
           empower students to connect with peers, learn emerging technologies,
           and build impactful solutions for real-world challenges.
-        </p>
+        </p> */}
+        <h1 className="text-9xl font-zentry font-black text-blue-50">
+          OUR THREE PILLARS
+        </h1>
       </div>
       <div className="grid w-full grid-cols-2 grid-rows-2 gap-7">
-        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 transition-transform duration-300 hover:scale-[1.02]">
+        <BentoTilt
+          className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 transition-transform duration-300 hover:scale-[1.02]"
+          isLeft={true}
+        >
           <BentoCard
             src="/connect.jpg"
             title={

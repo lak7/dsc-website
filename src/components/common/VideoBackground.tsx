@@ -19,7 +19,7 @@ const VideoBackground = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-70"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-100"
       >
         <source
           src="https://video.wixstatic.com/video/2b2edc_9873c58bfe44462d87733f089cffcdad/1080p/mp4/file.mp4"
