@@ -88,7 +88,7 @@ export const BentoCard = ({
 };
 
 const Features = () => (
-  <section className="bg-black pb-52">
+  <section className="bg-black pb-20 overflow-hidden">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-20">
         {/* <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
