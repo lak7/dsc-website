@@ -10,9 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
-
 interface Team {
-<<<<<<< HEAD
   title: string; // The title of the team (e.g., "Heads", "Executives", "Volunteers")
   members: string[]; // Array of member names in the team
 }
@@ -21,18 +19,7 @@ interface Teams {
   Heads: Team; // Specific structure for the "Heads" team
   Executives: Team; // Specific structure for the "Executives" team
   Volunteers: Team; // Specific structure for the "Volunteers" team
-=======
-  title: string; 
-  members: string[]; 
 }
-
-interface Teams {
-  Heads: Team; 
-  Executives: Team; 
-  Volunteers: Team; 
->>>>>>> 8754fdf52264a25cb8a5cbd507e62d67c83feb3a
-}
-
 
 interface DepartmentDialogProps {
   title: string;
@@ -54,11 +41,7 @@ export function DepartmentDialog({
       <DialogTrigger asChild>
         <div onClick={() => setIsOpen(true)}>{children}</div>
       </DialogTrigger>
-<<<<<<< HEAD
-      <DialogContent className="sm:max-w-[550px] bg-black/90 border border-gray-800 text-gray-100">
-=======
-      <DialogContent className="sm:max-w-[550px] bg-black/90 border border-gray-500 text-gray-100">
->>>>>>> 8754fdf52264a25cb8a5cbd507e62d67c83feb3a
+      <DialogContent className="sm:max-w-[550px] bg-black/90 border border-gray-100 text-gray-100">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold tracking-tight">
             {title}

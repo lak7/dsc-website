@@ -141,17 +141,17 @@ export const VideoBackground6 = () => {
   if (!isClient) return null;
 
   return (
-    <div className="absolute inset-0 w-full h-full z-0">
+    <div className="absolute inset-0 w-full h-full z-0 opacity-30">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-70"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-100"
       >
         <source src="video/video5.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/50" />{" "}
+      <div className="absolute inset-0 " />{" "}
       {/* Optional overlay to ensure text remains readable */}
     </div>
   );

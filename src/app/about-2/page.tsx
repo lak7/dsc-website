@@ -18,6 +18,82 @@ import { VideoBackground6 } from "@/components/common/VideoBackground";
 
 const departments = [
   {
+    title: "DevOps",
+    description:
+      "Streamlining operations with efficient systems and processes to ensure smooth execution.",
+    color: "#f97316",
+    icon: <Laptop className="h-5 w-5 text-orange-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Tanishq Raj"],
+      },
+      Executives: {
+        title: "Executives",
+        members: ["Ishika", "Tanishq", "Ujjawal", "Aarjav Jain"],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: ["Shazan Hussain Zaidi", "Samvid Chawla", "Vaibhav Sharma"],
+      },
+    },
+  },
+  {
+    title: "Full Stack Development",
+    description:
+      "The backbone of technological innovation, creating robust systems and platforms.",
+    color: "#ec4899",
+    icon: <Code className="h-5 w-5 text-pink-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Archit Jain"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Dhruv Roy",
+          "Lakshay Jain",
+          "Rishi Kumar Nayak",
+          "Vasundhra Yadav",
+          "Ishika Gupta",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: ["Kaushal", "Saparya Jagannath", "Suhavi Jain"],
+      },
+    },
+  },
+
+  {
+    title: "Machine Learning",
+    description:
+      "Exploring cutting-edge AI and analytics to support data-driven decision-making.",
+    color: "#0ea5e9",
+    icon: <Brain className="h-5 w-5 text-sky-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Aditya Batra"],
+      },
+      Executives: {
+        title: "Executives",
+        members: ["Aditya Yadav", "Mukul Kumar"],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: [
+          "Devanshu Anand",
+          "Lakshya Saxena",
+          "Nityam Gupta",
+          "Nitin Kumar Singh",
+          "Piyush Baweja",
+        ],
+      },
+    },
+  },
+  {
     title: "Content and Documentation",
     description:
       "Responsible for creating engaging content and maintaining accurate records for seamless communication.",
@@ -184,81 +260,6 @@ const departments = [
       },
     },
   },
-  {
-    title: "Full Stack Development",
-    description:
-      "The backbone of technological innovation, creating robust systems and platforms.",
-    color: "#ec4899",
-    icon: <Code className="h-5 w-5 text-pink-500" />,
-    teams: {
-      Heads: {
-        title: "Heads",
-        members: ["Archit Jain"],
-      },
-      Executives: {
-        title: "Executives",
-        members: [
-          "Dhruv Roy",
-          "Lakshay Jain",
-          "Rishi Kumar Nayak",
-          "Vasundhra Yadav",
-          "Ishika Gupta",
-        ],
-      },
-      Volunteers: {
-        title: "Volunteers",
-        members: ["Kaushal", "Saparya Jagannath", "Suhavi Jain"],
-      },
-    },
-  },
-  {
-    title: "DevOps",
-    description:
-      "Streamlining operations with efficient systems and processes to ensure smooth execution.",
-    color: "#f97316",
-    icon: <Laptop className="h-5 w-5 text-orange-500" />,
-    teams: {
-      Heads: {
-        title: "Heads",
-        members: ["Tanishq Raj"],
-      },
-      Executives: {
-        title: "Executives",
-        members: ["Ishika", "Tanishq", "Ujjawal", "Aarjav Jain"],
-      },
-      Volunteers: {
-        title: "Volunteers",
-        members: ["Shazan Hussain Zaidi", "Samvid Chawla", "Vaibhav Sharma"],
-      },
-    },
-  },
-  {
-    title: "Machine Learning",
-    description:
-      "Exploring cutting-edge AI and analytics to support data-driven decision-making.",
-    color: "#0ea5e9",
-    icon: <Brain className="h-5 w-5 text-sky-500" />,
-    teams: {
-      Heads: {
-        title: "Heads",
-        members: ["Aditya Batra"],
-      },
-      Executives: {
-        title: "Executives",
-        members: ["Aditya Yadav", "Mukul Kumar"],
-      },
-      Volunteers: {
-        title: "Volunteers",
-        members: [
-          "Devanshu Anand",
-          "Lakshya Saxena",
-          "Nityam Gupta",
-          "Nitin Kumar Singh",
-          "Piyush Baweja",
-        ],
-      },
-    },
-  },
 ];
 
 export default function DepartmentsGrid() {
@@ -280,13 +281,13 @@ export default function DepartmentsGrid() {
       </div>
 
       {/* Departments Section */}
-      <div className="min-h-screen bg-black p-6 md:p-8 lg:p-12 z-50">
+      <div className="min-h-screen bg-black p-6 md:p-8 lg:p-12 !z-50">
         <div className="max-w-7xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 z-50">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl  text-white ">
               Our Departments
             </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               Meet the teams that make our society thrive through innovation,
               creativity, and dedication.
             </p>
