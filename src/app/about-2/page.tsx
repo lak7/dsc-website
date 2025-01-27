@@ -23,12 +23,12 @@ const departments = [
       "Responsible for creating engaging content and maintaining accurate records for seamless communication.",
     color: "#22c55e",
     icon: <PenTool className="h-5 w-5 text-green-500" />,
-    teams: [
-      {
+    teams: {
+      Heads: {
         title: "Heads",
         members: ["Anisha Garg", "Manasi S Pillai"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: [
           "Anant Sharma",
@@ -38,11 +38,11 @@ const departments = [
           "Shaivi Goyal",
         ],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: ["Abhilasha Negi", "Pritha", "Saamiya", "Saksham Chandela"],
       },
-    ],
+    },
   },
   {
     title: "Design and Video Editing",
@@ -50,12 +50,12 @@ const departments = [
       "Creating compelling visuals and multimedia content to capture and share the essence of projects.",
     color: "#ef4444",
     icon: <Film className="h-5 w-5 text-red-500" />,
-    teams: [
-      {
+    teams: {
+      Heads: {
         title: "Heads",
         members: ["Faraz Khan", "Mehul Gupta", "Swechchha Patel"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: [
           "Aditya Tyagi",
@@ -72,11 +72,11 @@ const departments = [
           "Shubham",
         ],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: ["Aryan Tyagi", "Pranay Chaudhary"],
       },
-    ],
+    },
   },
   {
     title: "Publicity and Social Media",
@@ -84,12 +84,12 @@ const departments = [
       "Enhancing the team's presence through impactful social media campaigns and publicity.",
     color: "#eab308",
     icon: <Megaphone className="h-5 w-5 text-yellow-500" />,
-    teams: [
-      {
+    teams: {
+      Heads: {
         title: "Heads",
         members: ["Anshul Gupta", "Vidhi Setiya", "Uditya Raj Singh"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: [
           "Amit Kumar",
@@ -102,7 +102,7 @@ const departments = [
           "Vansh Tandon",
         ],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: [
           "Aditya Tyagi",
@@ -116,7 +116,7 @@ const departments = [
           "Vivek Singh",
         ],
       },
-    ],
+    },
   },
   {
     title: "Sponsorship",
@@ -124,12 +124,12 @@ const departments = [
       "Building and managing relationships with sponsors to ensure financial and resource support",
     color: "#06b6d4",
     icon: <Flame className="h-5 w-5 text-cyan-500" />,
-    teams: [
-      {
+    teams: {
+      Heads: {
         title: "Heads",
         members: ["Pari Gupta", "Kartik Gupta"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: [
           "Aagam Jain",
@@ -145,19 +145,23 @@ const departments = [
           "Yashika Gandhi",
         ],
       },
-    ],
+      Volunteers: {
+        title: "Volunteers",
+        members: [],
+      },
+    },
   },
   {
     title: "Event Management",
     description: "Planning and executing events with precision and creativity.",
     color: "#8b5cf6",
     icon: <Users className="h-5 w-5 text-purple-500" />,
-    teams: [
-      {
+    teams: {
+      Heads: {
         title: "Heads",
         members: ["Aryan Tyagi", "Bhavisya Ratna"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: [
           "Ayush Bansal",
@@ -168,7 +172,7 @@ const departments = [
           "Shivansh Suryan",
         ],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: [
           "Devika Malhotra",
@@ -178,7 +182,7 @@ const departments = [
           "Vanshika Bansal",
         ],
       },
-    ],
+    },
   },
   {
     title: "Full Stack Development",
@@ -186,12 +190,12 @@ const departments = [
       "The backbone of technological innovation, creating robust systems and platforms.",
     color: "#ec4899",
     icon: <Code className="h-5 w-5 text-pink-500" />,
-    teams: [
-      {
-        title: "Head",
+    teams: {
+      Heads: {
+        title: "Heads",
         members: ["Archit Jain"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: [
           "Dhruv Roy",
@@ -201,11 +205,11 @@ const departments = [
           "Ishika Gupta",
         ],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: ["Kaushal", "Saparya Jagannath", "Suhavi Jain"],
       },
-    ],
+    },
   },
   {
     title: "DevOps",
@@ -213,20 +217,20 @@ const departments = [
       "Streamlining operations with efficient systems and processes to ensure smooth execution.",
     color: "#f97316",
     icon: <Laptop className="h-5 w-5 text-orange-500" />,
-    teams: [
-      {
-        title: "Head",
+    teams: {
+      Heads: {
+        title: "Heads",
         members: ["Tanishq Raj"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: ["Ishika", "Tanishq", "Ujjawal", "Aarjav Jain"],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: ["Shazan Hussain Zaidi", "Samvid Chawla", "Vaibhav Sharma"],
       },
-    ],
+    },
   },
   {
     title: "Machine Learning",
@@ -234,16 +238,16 @@ const departments = [
       "Exploring cutting-edge AI and analytics to support data-driven decision-making.",
     color: "#0ea5e9",
     icon: <Brain className="h-5 w-5 text-sky-500" />,
-    teams: [
-      {
-        title: "Head",
+    teams: {
+      Heads: {
+        title: "Heads",
         members: ["Aditya Batra"],
       },
-      {
+      Executives: {
         title: "Executives",
         members: ["Aditya Yadav", "Mukul Kumar"],
       },
-      {
+      Volunteers: {
         title: "Volunteers",
         members: [
           "Devanshu Anand",
@@ -253,7 +257,7 @@ const departments = [
           "Piyush Baweja",
         ],
       },
-    ],
+    },
   },
 ];
 
@@ -298,7 +302,7 @@ export default function DepartmentsGrid() {
                 <DepartmentCard
                   title={dept.title}
                   description={dept.description}
-                  memberCount={dept.teams.reduce(
+                  memberCount={Object.values(dept.teams).reduce(
                     (acc, team) => acc + team.members.length,
                     0
                   )}
