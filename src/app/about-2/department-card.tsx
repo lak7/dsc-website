@@ -15,7 +15,7 @@ export function DepartmentCard({
 }: DepartmentCardProps) {
   return (
     <div
-      className="group relative overflow-hidden rounded-lg border border-gray-800 bg-black/50 p-6 transition-all hover:scale-[1.02] hover:border-gray-700 cursor-pointer"
+      className="group relative overflow-hidden rounded-lg border border-gray-800 bg-black/50 p-6 transition-all hover:scale-[1.02] hover:border-gray-700 cursor-pointer w-80 h-60"
       style={{
         boxShadow: `0 0 20px ${color}25`,
       }}
