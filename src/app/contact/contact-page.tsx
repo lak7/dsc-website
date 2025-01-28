@@ -90,7 +90,7 @@ const ContactUs: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="p-2 rounded bg-gray-700 text-white"
+                  className="p-2  bg-black text-white border border-white-rounded "
                   required
                 />
               </div>
@@ -104,7 +104,7 @@ const ContactUs: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="p-2 rounded bg-gray-700 text-white"
+                  className="p-2  bg-black text-white border border-white-rounded"
                   required
                 />
               </div>
@@ -118,7 +118,7 @@ const ContactUs: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="p-2 rounded bg-gray-700 text-white"
+                  className="p-2  bg-black text-white border border-white-rounded"
                   required
                 />
               </div>
