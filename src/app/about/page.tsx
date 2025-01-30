@@ -1,14 +1,268 @@
-import {
-  VideoBackground4,
-  VideoBackground6,
-} from "@/components/common/VideoBackground";
-import { Departments } from "@/constants/teamdata";
-import { DropdownCard } from "@/components/DropdownCard";
-import Image from "next/image";
-import { AnimatedTestimonialsDemo } from "./Core";
-import TeamGrid from "./Core2";
+"use client";
 
-const page = () => {
+import {
+  Brain,
+  Code,
+  Film,
+  Flame,
+  Laptop,
+  Megaphone,
+  PenTool,
+  Users,
+} from "lucide-react";
+// import { DepartmentCard } from "./department-card";
+// import { DepartmentDialog } from "./department-dialog";
+import { DepartmentCard } from "./department-card";
+import { DepartmentDialog } from "./department-dialog";
+import { VideoBackground6 } from "@/components/common/VideoBackground";
+
+const departments = [
+  {
+    title: "DevOps",
+    description:
+      "Streamlining operations with efficient systems and processes to ensure smooth execution.",
+    color: "#f97316",
+    icon: <Laptop className="h-5 w-5 text-orange-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Tanishq Raj"],
+      },
+      Executives: {
+        title: "Executives",
+        members: ["Ishika", "Tanishq", "Ujjawal", "Aarjav Jain"],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: ["Shazan Hussain Zaidi", "Samvid Chawla", "Vaibhav Sharma"],
+      },
+    },
+  },
+  {
+    title: "Full Stack Development",
+    description:
+      "The backbone of technological innovation, creating robust systems and platforms.",
+    color: "#ec4899",
+    icon: <Code className="h-5 w-5 text-pink-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Archit Jain"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Dhruv Roy",
+          "Lakshay Jain",
+          "Rishi Kumar Nayak",
+          "Vasundhra Yadav",
+          "Ishika Gupta",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: ["Kaushal", "Saparya Jagannath", "Suhavi Jain"],
+      },
+    },
+  },
+
+  {
+    title: "Machine Learning",
+    description:
+      "Exploring cutting-edge AI and analytics to support data-driven decision-making.",
+    color: "#0ea5e9",
+    icon: <Brain className="h-5 w-5 text-sky-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Aditya Batra"],
+      },
+      Executives: {
+        title: "Executives",
+        members: ["Aditya Yadav", "Mukul Kumar"],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: [
+          "Devanshu Anand",
+          "Lakshya Saxena",
+          "Nityam Gupta",
+          "Nitin Kumar Singh",
+          "Piyush Baweja",
+        ],
+      },
+    },
+  },
+  {
+    title: "Content and Documentation",
+    description:
+      "Responsible for creating engaging content and maintaining accurate records for seamless communication.",
+    color: "#22c55e",
+    icon: <PenTool className="h-5 w-5 text-green-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Anisha Garg", "Manasi S Pillai"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Anant Sharma",
+          "Aryan Kumar",
+          "Manik Jindal",
+          "Niharika",
+          "Shaivi Goyal",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: ["Abhilasha Negi", "Pritha", "Saamiya", "Saksham Chandela"],
+      },
+    },
+  },
+  {
+    title: "Design and Video Editing",
+    description:
+      "Creating compelling visuals and multimedia content to capture and share the essence of projects.",
+    color: "#ef4444",
+    icon: <Film className="h-5 w-5 text-red-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Faraz Khan", "Mehul Gupta", "Swechchha Patel"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Aditya Tyagi",
+          "Anjali Mittal",
+          "Chahal",
+          "Chhavi Gupta",
+          "Dhruv Kashyap",
+          "Himanshu Singh",
+          "Nishtha Agarwal",
+          "Parth Ahuja",
+          "Piyush Chauhan",
+          "Pratyush Kumar Rai",
+          "Satpal",
+          "Shubham",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: ["Aryan Tyagi", "Pranay Chaudhary"],
+      },
+    },
+  },
+  {
+    title: "Publicity and Social Media",
+    description:
+      "Enhancing the team's presence through impactful social media campaigns and publicity.",
+    color: "#eab308",
+    icon: <Megaphone className="h-5 w-5 text-yellow-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Anshul Gupta", "Vidhi Setiya", "Uditya Raj Singh"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Amit Kumar",
+          "Asmit Patel",
+          "Jatin Prabhakar",
+          "Mukul",
+          "Nilesh Bassi",
+          "Sagar Kumar Jha",
+          "Sambhav",
+          "Vansh Tandon",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: [
+          "Aditya Tyagi",
+          "Ayush Vibhor",
+          "Deepti Gautam",
+          "Md Yusuf Masood",
+          "Rakshit Shokeen",
+          "Rohit Kumar",
+          "Sparsh Bhardwaj",
+          "Sahil Garg",
+          "Vivek Singh",
+        ],
+      },
+    },
+  },
+  {
+    title: "Sponsorship",
+    description:
+      "Building and managing relationships with sponsors to ensure financial and resource support",
+    color: "#06b6d4",
+    icon: <Flame className="h-5 w-5 text-cyan-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Pari Gupta", "Kartik Gupta"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Aagam Jain",
+          "Bhanu Prakash",
+          "Daksh Chopra",
+          "Lakshay Kaushik",
+          "Lakshita Verma",
+          "Shaad Abdullah",
+          "Shyam Agarwal",
+          "S Siddhant",
+          "Varun Kaushik",
+          "Yash Nagpal",
+          "Yashika Gandhi",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: [],
+      },
+    },
+  },
+  {
+    title: "Event Management",
+    description: "Planning and executing events with precision and creativity.",
+    color: "#8b5cf6",
+    icon: <Users className="h-5 w-5 text-purple-500" />,
+    teams: {
+      Heads: {
+        title: "Heads",
+        members: ["Aryan Tyagi", "Bhavisya Ratna"],
+      },
+      Executives: {
+        title: "Executives",
+        members: [
+          "Ayush Bansal",
+          "Harsh",
+          "Harsh Sharma",
+          "Manav Manhas",
+          "Om Tripathi",
+          "Shivansh Suryan",
+        ],
+      },
+      Volunteers: {
+        title: "Volunteers",
+        members: [
+          "Devika Malhotra",
+          "Govind Gupta",
+          "Krish Gupta",
+          "Shiv Arora",
+          "Vanshika Bansal",
+        ],
+      },
+    },
+  },
+];
+
+export default function DepartmentsGrid() {
   return (
     <div className="min-h-dvh bg-[#0A0A0F] text-white/90 overflow-y-auto font-light">
       <VideoBackground6 />
@@ -27,100 +281,40 @@ const page = () => {
       </div>
 
       {/* Departments Section */}
-      <main className="relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-center mb-4 text-white">
-            Our Departments
-          </h2>
-          <p className="text-gray-400 text-center mb-8 sm:mb-16 text-base sm:text-lg max-w-2xl mx-auto">
-            Meet the teams that make innovation possible
-          </p>
-
-          <div className="grid gap-4 sm:gap-6 lg:gap-8">
-            {Departments.map((dept) => (
-              <div
-                key={dept.name}
-                className="w-full backdrop-blur-sm bg-white/5 rounded-xl sm:rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+      <div className="min-h-screen bg-black p-6 md:p-8 lg:p-12 !z-50">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <div className="text-center space-y-4 z-50">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl  text-white ">
+              Our Departments
+            </h1>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Meet the teams that make our society thrive through innovation,
+              creativity, and dedication.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+            {departments.map((dept) => (
+              <DepartmentDialog
+                key={dept.title}
+                title={dept.title}
+                description={dept.description}
+                teams={dept.teams}
               >
-                <DropdownCard title={dept.name}>
-                  <p className="text-base sm:text-xl font-medium my-2 sm:my-3 text-gray-300">
-                    {dept.description}
-                  </p>
-                  <div className="flex flex-col w-full justify-between items-center">
-                    <figure className="w-full">
-                      <figcaption className="text-2xl sm:text-3xl font-semibold my-4 sm:my-5 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
-                        Heads
-                      </figcaption>
-                      <ul
-                        className={`grid grid-cols-1 sm:grid-cols-2 ${
-                          dept.Heads.length > 2 ? "lg:grid-cols-3" : ""
-                        } gap-4 sm:gap-6 lg:gap-8`}
-                      >
-                        {dept.Heads?.map((head) => (
-                          <li
-                            key={head}
-                            className="flex flex-col items-center group"
-                          >
-                            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full max-w-xs mx-auto">
-                              <Image
-                                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                                src="/image.png"
-                                alt={`${head}-image`}
-                                width={400}
-                                height={450}
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            </div>
-                            <p className="text-xl sm:text-2xl mt-3 sm:mt-4 font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                              {head}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    </figure>
-
-                    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12">
-                      <figure className="w-full p-4 sm:p-6 rounded-lg sm:rounded-xl bg-blue-950/20 border border-blue-500/20">
-                        <figcaption className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-                          Executives
-                        </figcaption>
-                        <ul className="space-y-2 sm:space-y-3">
-                          {dept.Executives?.map((Exc) => (
-                            <li
-                              key={Exc}
-                              className="text-base sm:text-lg text-gray-300 hover:text-white transition-colors"
-                            >
-                              {Exc}
-                            </li>
-                          ))}
-                        </ul>
-                      </figure>
-
-                      <figure className="w-full p-4 sm:p-6 rounded-lg sm:rounded-xl bg-pink-950/20 border border-pink-500/20">
-                        <figcaption className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400">
-                          Volunteers
-                        </figcaption>
-                        <ul className="space-y-2 sm:space-y-3">
-                          {dept.Volunteers?.map((Vol) => (
-                            <li
-                              key={Vol}
-                              className="text-base sm:text-lg text-gray-300 hover:text-white transition-colors"
-                            >
-                              {Vol}
-                            </li>
-                          ))}
-                        </ul>
-                      </figure>
-                    </div>
-                  </div>
-                </DropdownCard>
-              </div>
+                <DepartmentCard
+                  title={dept.title}
+                  description={dept.description}
+                  memberCount={Object.values(dept.teams).reduce(
+                    (acc, team) => acc + team.members.length,
+                    0
+                  )}
+                  color={dept.color}
+                  icon={dept.icon}
+                />
+              </DepartmentDialog>
             ))}
           </div>
         </div>
-      </main>
+      </div>
     </div>
   );
-};
-
-export default page;
+}

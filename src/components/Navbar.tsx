@@ -17,7 +17,7 @@ import Link from "next/link";
 const navItems = [
   { name: "Upcoming Event", route: "/upcoming-event", disabled: true },
   // { name: "About", route: "about" },
-  { name: "About", route: "about-2" },
+  { name: "About", route: "about" },
   { name: "Event Calendar", route: "event-calendar" },
   { name: "Contact", route: "contact" },
 ];
