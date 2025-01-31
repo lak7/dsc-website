@@ -61,23 +61,34 @@ export function DepartmentDialog({
                   teams.Heads.members.length > 2 ? "lg:grid-cols-3" : ""
                 } gap-4 sm:gap-6 lg:gap-8`}
               >
-                {teams.Heads.members?.map((head) => (
-                  <li key={head} className="flex flex-col items-center group">
-                    <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full max-w-xs mx-auto">
-                      <Image
-                        className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                        src="/image.png"
-                        alt={`${head}-image`}
-                        width={400}
-                        height={450}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                    <p className="text-xl sm:text-2xl mt-3 sm:mt-4 font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                      {head}
-                    </p>
-                  </li>
-                ))}
+                {teams.Heads.members?.map((head) => {
+                  // Generate dynamic image path based on member name
+                  const formattedName = head.replace(/\s+/g, "_"); // Replace spaces with underscores
+                  // console.log(`this is : ${formattedName}`);
+                  const imagePath = `/Member/${formattedName}.png`;
+
+                  return (
+                    <li key={head} className="flex flex-col items-center group">
+                      <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full max-w-xs mx-auto">
+                        <Image
+                          className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                          src={imagePath}
+                          alt={`${head}-image`}
+                          width={400}
+                          height={450}
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src =
+                              "/Member/image.png";
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                      <p className="text-xl sm:text-2xl mt-3 sm:mt-4 font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                        {head}
+                      </p>
+                    </li>
+                  );
+                })}
               </ul>
             </figure>
 
