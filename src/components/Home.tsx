@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import VideoBackground from "./common/VideoBackground";
+import SpiralEarthScene from "./Spiral-earth";
 
 export default function Home() {
   // const [isHovered, setIsHovered] = useState(false);
@@ -12,7 +13,7 @@ export default function Home() {
       <main className="relative mt-4 sm:mt-8 z-10 min-h-screen flex flex-col items-center justify-center px-4">
         <VideoBackground />
         <div className="max-w-[90vw] lg:max-w-7xl mx-auto text-center px-4">
-          <div className="absolute left-0 top-0 z-40 size-full">
+          <div className="absolute left-0 top-0 z-40 size-full flex">
             <div className="mt-24 px-5 sm:px-10">
               <h1 className="special-font hero-heading text-blue-100 text-left text-sm">
                 <motion.span
@@ -76,8 +77,10 @@ export default function Home() {
               </h1>
             </div>
 
+            <SpiralEarthScene />
+
             {/* Text section */}
-            <div className="absolute bottom-20 right-0 lg:right-[10%] 2xl:right-64 lg:top-1/2 lg:-translate-y-1/2 flex flex-row lg:flex-row items-end lg:items-center gap-4 lg:gap-8 px-5 sm:px-10 max-w-[85vw] lg:max-w-none">
+            {/* <div className="absolute bottom-20 right-0 lg:right-[10%] 2xl:right-64 lg:top-1/2 lg:-translate-y-1/2 flex flex-row lg:flex-row items-end lg:items-center gap-4 lg:gap-8 px-5 sm:px-10 max-w-[85vw] lg:max-w-none">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -114,7 +117,7 @@ export default function Home() {
                   </p>
                 </div>
               </motion.div>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
