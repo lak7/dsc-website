@@ -17,8 +17,9 @@ const page = () => {
           {/* Header Content */}
           <div className="pt-24 sm:pt-32 pb-12 sm:pb-20">
             <div className="max-w-4xl">
-              <h1 className="special-font hero-heading text-blue-100 text-left mb-6">
-                E<b>VEN</b>T<br />
+              <h1 className="special-font hero-heading text-blue-100 text-left mb-6 sm:text-nowrap">
+                E<b>VEN</b>T-
+                <br className="block sm:hidden" />
                 TI<b>MEL</b>INE
               </h1>
 

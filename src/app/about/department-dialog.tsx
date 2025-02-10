@@ -57,25 +57,30 @@ export function DepartmentDialog({
                 Heads
               </figcaption>
               <ul
-                className={`grid grid-cols-1 sm:grid-cols-2 ${
+                className={`w-full ${
+                  teams.Heads.members.length === 1
+                    ? "flex justify-center items-center"
+                    : "grid grid-cols-1 sm:grid-cols-2"
+                } ${
                   teams.Heads.members.length > 2 ? "lg:grid-cols-3" : ""
-                } gap-4 sm:gap-6 lg:gap-8`}
+                } gap-6 sm:gap-8`}
               >
                 {teams.Heads.members?.map((head) => {
-                  // Generate dynamic image path based on member name
-                  const formattedName = head.replace(/\s+/g, "_"); // Replace spaces with underscores
-                  // console.log(`this is : ${formattedName}`);
+                  const formattedName = head.replace(/\s+/g, "_");
                   const imagePath = `/Member/${formattedName}.png`;
 
                   return (
-                    <li key={head} className="flex flex-col items-center group">
-                      <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full max-w-xs mx-auto">
+                    <li
+                      key={head}
+                      className="flex flex-col items-center group w-full"
+                    >
+                      <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full aspect-[4/5]">
                         <Image
-                          className="w-full flex justify-center items-center h-auto transition-transform duration-300 group-hover:scale-105"
+                          className="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-105"
                           src={imagePath}
                           alt={`${head}-image`}
-                          width={400}
-                          height={450}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src =
                               "/Member/image.png";
@@ -83,7 +88,7 @@ export function DepartmentDialog({
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
-                      <p className="text-xl sm:text-2xl mt-3 sm:mt-4 font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                      <p className="text-xl sm:text-2xl mt-4 font-medium text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
                         {head}
                       </p>
                     </li>
