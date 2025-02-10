@@ -37,7 +37,11 @@ const Footer = () => {
           {["Home", "About", "Event Calendar", "Contact"].map((item, index) => (
             <Link
               key={index}
-              href={`/${item.toLowerCase().replace(" ", "-")}`}
+              href={
+                item === "Home"
+                  ? "/"
+                  : `/${item.toLowerCase().replace(" ", "-")}`
+              }
               className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
             >
               {item}

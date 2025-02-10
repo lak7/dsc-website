@@ -272,8 +272,8 @@ export default function DepartmentsGrid() {
         <div className="max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="z-40 w-full">
             <div className="mt-24 px-2">
-              <h1 className="special-font hero-heading text-blue-100 text-left">
-                A<b>BO</b>UT <br /> US <br />
+              <h1 className="special-font hero-heading text-blue-100 text-left sm:text-nowrap">
+                A<b>BO</b>UT-US <br />
               </h1>
             </div>
           </div>
@@ -288,8 +288,7 @@ export default function DepartmentsGrid() {
               Our Departments
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Meet the teams that make our society thrive through innovation,
-              creativity, and dedication.
+              Meet the teams that make our society thrive.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">

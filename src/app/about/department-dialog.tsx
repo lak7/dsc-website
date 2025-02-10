@@ -71,7 +71,7 @@ export function DepartmentDialog({
                     <li key={head} className="flex flex-col items-center group">
                       <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full max-w-xs mx-auto">
                         <Image
-                          className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                          className="w-full flex justify-center items-center h-auto transition-transform duration-300 group-hover:scale-105"
                           src={imagePath}
                           alt={`${head}-image`}
                           width={400}
