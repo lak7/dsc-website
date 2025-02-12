@@ -2,13 +2,14 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type EventDetailsProps = {
   title: string;
   subtitle?: string;
   description: string;
   highlights?: string[];
-  winners?: { position: string; name: string }[];
+  winners?: { position: string; name: string ,image:string}[];
   closingNote?: string;
   reelLink?: string;
 };
@@ -117,10 +118,13 @@ const EventDetails: FC<EventDetailsProps> = ({
                 className="group p-6 rounded-xl backdrop-blur-sm bg-gradient-to-br from-white/10 to-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/5"
               >
                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform">
-                  {winner.position}
+                  <div className="hidden">
+                      {winner.position}
+                  </div>
+                 <img src={winner.image} alt="winner.name"/> 
                 </div>
                 <div className="text-lg font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-purple-600 group-hover:from-blue-300 group-hover:to-purple-400 transition-all">
-                  {winner.name}
+                  {winner.name} 
                 </div>
               </motion.div>
             ))}

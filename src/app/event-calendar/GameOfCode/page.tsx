@@ -31,9 +31,9 @@ const GameOfCode = () => {
               "Enthusiastic participation from passionate coders across colleges, fostering learning and knowledge exchange.",
             ]}
             winners={[
-              { position: "🥇", name: "Over Engineers" },
-              { position: "🥈", name: "Chote Miya - Bade Miya" },
-              { position: "🥉", name: "Hex Questers" },
+              { position: "🥇", name: "Over Engineers",image:"/gameofcode1.jpg"  },
+              { position: "🥈", name: "Chote Miya - Bade Miya",image:"/gameofcode2.jpg" },
+              { position: "🥉", name: "Hex Questers",image:"/gameofcode3.jpg" },
             ]}
             closingNote="Kudos to all the participants for their exceptional performance and innovative approaches. The competition was fierce, but the collaborative spirit and enthusiasm stood out the most. Together, we created a memorable experience that inspired and empowered participants."
             reelLink="https://www.instagram.com/reel/DBI8vlwSVKy/"
