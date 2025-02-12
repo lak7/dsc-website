@@ -57,36 +57,37 @@ export function DepartmentDialog({
                 Heads
               </figcaption>
               <ul
-                className={`w-full ${
-                  teams.Heads.members.length === 1
+                className={`w-full ${teams.Heads.members.length === 1
                     ? "flex justify-center items-center"
                     : "grid grid-cols-1 sm:grid-cols-2"
-                } ${
-                  teams.Heads.members.length > 2 ? "lg:grid-cols-3" : ""
-                }${teams.Heads.members.length == 1 ? "lg:grid-cols-1" : ""} gap-6 sm:gap-8`}
+                  } ${teams.Heads.members.length > 2 ? "lg:grid-cols-3" : ""
+                  }${teams.Heads.members.length == 1 ? "lg:grid-cols-1" : ""} gap-6 sm:gap-8`}
               >
                 {teams.Heads.members?.map((head) => {
                   const formattedName = head.replace(/\s+/g, "_");
                   const imagePath = `/Member/${formattedName}.png`;
+                  const isSingleMember = teams.Heads.members.length === 1;
 
                   return (
                     <li
                       key={head}
-                      className="flex flex-col justify-center items-center group w-full"
+                      className={`flex flex-col justify-center items-center group ${isSingleMember ? "max-w-[60%] mx-auto" : "w-full"
+                        }`}
                     >
-                      <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full aspect-[4/5]">
+                      <div
+                        className={`relative overflow-hidden rounded-xl sm:rounded-2xl w-full ${isSingleMember ? "aspect-[4/5]" : "aspect-[4/5]"
+                          }`}
+                      >
                         <Image
-                          className={`object-center w-full h-full transition-transform duration-300 group-hover:scale-102 ${head=="Tanishq Raj"?"pl-16":"" }`}
+                          className={`object-center w-full h-full transition-transform duration-300 group-hover:scale-102 ${head === "Tanishq Raj" ? "pl-5" : ""}  `}
                           src={imagePath}
                           alt={`${head}-image`}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           onError={(e) => {
-                            (e.target as HTMLImageElement).src =
-                              "/Member/image.png";
+                            (e.target as HTMLImageElement).src = "/Member/image.png";
                           }}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                       <p className="text-xl sm:text-2xl mt-4 font-medium text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
                         {head}
@@ -94,6 +95,7 @@ export function DepartmentDialog({
                     </li>
                   );
                 })}
+
               </ul>
             </figure>
 
