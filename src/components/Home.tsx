@@ -79,7 +79,7 @@ export default function Home() {
 
             <SpiralEarthScene />
 
-            {/* Text section */}
+            {/* Text sectio */}
             {/* <div className="absolute bottom-20 right-0 lg:right-[10%] 2xl:right-64 lg:top-1/2 lg:-translate-y-1/2 flex flex-row lg:flex-row items-end lg:items-center gap-4 lg:gap-8 px-5 sm:px-10 max-w-[85vw] lg:max-w-none">
               <motion.div
                 initial={{ opacity: 0 }}
