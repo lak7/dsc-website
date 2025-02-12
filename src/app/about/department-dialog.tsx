@@ -63,7 +63,7 @@ export function DepartmentDialog({
                     : "grid grid-cols-1 sm:grid-cols-2"
                 } ${
                   teams.Heads.members.length > 2 ? "lg:grid-cols-3" : ""
-                } gap-6 sm:gap-8`}
+                }${teams.Heads.members.length == 1 ? "lg:grid-cols-1" : ""} gap-6 sm:gap-8`}
               >
                 {teams.Heads.members?.map((head) => {
                   const formattedName = head.replace(/\s+/g, "_");
@@ -72,11 +72,11 @@ export function DepartmentDialog({
                   return (
                     <li
                       key={head}
-                      className="flex flex-col items-center group w-full"
+                      className="flex flex-col justify-center items-center group w-full"
                     >
                       <div className="relative overflow-hidden rounded-xl sm:rounded-2xl w-full aspect-[4/5]">
                         <Image
-                          className="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-105"
+                          className={`object-center w-full h-full transition-transform duration-300 group-hover:scale-102 ${head=="Tanishq Raj"?"pl-16":"" }`}
                           src={imagePath}
                           alt={`${head}-image`}
                           fill

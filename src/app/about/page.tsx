@@ -291,7 +291,7 @@ export default function DepartmentsGrid() {
               Meet the teams that make our society thrive.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3  gap-12">
             {departments.map((dept) => (
               <DepartmentDialog
                 key={dept.title}
