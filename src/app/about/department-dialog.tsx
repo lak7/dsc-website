@@ -41,7 +41,7 @@ export function DepartmentDialog({
       <DialogTrigger asChild>
         <div onClick={() => setIsOpen(true)}>{children}</div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[550px] bg-black/90 border border-gray-100 text-gray-100">
+      <DialogContent className="w-[70vw] h-[80vh] bg-black/90 border border-gray-100 text-gray-100">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold tracking-tight">
             {title}
