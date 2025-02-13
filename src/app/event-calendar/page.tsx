@@ -2,6 +2,7 @@ import {
   VideoBackground2,
   VideoBackground4,
   VideoBackground5,
+  VideoBackground6,
 } from "@/components/common/VideoBackground";
 import React from "react";
 import SocietyTimelineDemo from "./EventTimeline";
@@ -9,7 +10,7 @@ import SocietyTimelineDemo from "./EventTimeline";
 const page = () => {
   return (
     <div className="min-h-dvh bg-[#0A0A0F] text-white/90 overflow-y-auto font-light">
-      {/* <VideoBackground5 /> */}
+      <VideoBackground6 />
 
       {/* Hero Section */}
       <main className="relative z-10">

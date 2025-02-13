@@ -59,7 +59,7 @@ export function SocietyTimelineDemo() {
           <div className="grid grid-cols-2 gap-4">
             <Link href="/event-calendar/GameOfCode">
               <Image
-                src="/gameofcode.jpg"
+                src="/code.jpg"
                 alt="Game of Code Event"
                 width={500}
                 height={500}
@@ -67,8 +67,10 @@ export function SocietyTimelineDemo() {
               />
             </Link>
             <div className="space-y-2">
-              <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm 
-              ">
+              <div
+                className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm 
+              "
+              >
                 🥇 Over Engineers
               </div>
               <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
