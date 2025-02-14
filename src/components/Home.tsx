@@ -5,6 +5,7 @@ import VideoBackground from "./common/VideoBackground";
 import SpiralEarthScene from "./Spiral-earth";
 
 export default function Home() {
+  // alert(stt);
   // const [isHovered, setIsHovered] = useState(false);
 
   return (

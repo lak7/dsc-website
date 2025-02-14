@@ -22,7 +22,7 @@ export function SocietyTimelineDemo() {
                 alt="RRR Winners"
                 width={500}
                 height={500}
-                className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                className="rounded-lg object-contain h-20 md:h-44 lg:h-28 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
               />
             </Link>
             <div className="space-y-2">
@@ -63,7 +63,7 @@ export function SocietyTimelineDemo() {
                 alt="Game of Code Event"
                 width={500}
                 height={500}
-                className="rounded-lg h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] object-contain"
+                className="rounded-lg h-20 md:h-44 lg:h-28 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] object-contain"
               />
             </Link>
             <div className="space-y-2">
@@ -90,34 +90,6 @@ export function SocietyTimelineDemo() {
         </div>
       ),
     },
-    // {
-    //   title: "Upcoming Events",
-    //   content: (
-    //     <div className="mb-24">
-    //       <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-    //         Stay tuned for more exciting events from DSC BVCOE! We're planning
-    //         new challenges and learning opportunities.
-    //       </p>
-    //       <div className="mb-8">
-    //         <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-    //           📅 Technical Workshops
-    //         </div>
-    //         <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-    //           📅 Coding Competitions
-    //         </div>
-    //         <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-    //           📅 Hackathons
-    //         </div>
-    //       </div>
-    //       <Link
-    //         href="/events/upcoming"
-    //         className="inline-block text-blue-500 hover:text-blue-600 text-sm"
-    //       >
-    //         Check Our Event Calendar →
-    //       </Link>
-    //     </div>
-    //   ),
-    // },
   ];
 
   return (
