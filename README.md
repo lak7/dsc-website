@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Students Club - BVCOE
 
-## Getting Start
+![DSC Website Banner](./public/banner.png)
 
-First, run the development server:
+## 🚀 About DSC BVCOE
+
+Developer Students Club at Bharati Vidyapeeth's College of Engineering is a community of passionate student developers, designers, and innovators. We foster learning and collaboration in technology through workshops, events, and projects.
+
+## ✨ Website Features
+
+### 🏠 Home Page
+
+![Home Page](./public/home.png)
+
+- Modern, responsive design with dynamic animations
+- Featured events and activities showcase
+- Interactive 3D Earth visualization
+- Latest news and announcements
+
+### 📅 Event Timeline
+
+![Events Page](./public/events.png)
+
+- Comprehensive event calendar
+- Detailed event pages with registration links
+- Past event highlights and winners
+- Event photo galleries
+
+### 👥 About Us
+
+- Team member profiles
+- Department information
+- Club mission and vision
+- History and achievements
+
+### 📞 Contact
+
+- Contact form for inquiries
+- Social media links
+- Location information
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** Next.js 14
+- **Styling:** Tailwind CSS
+- **UI Components:** Custom components with modern design
+- **Animations:** Framer Motion
+- **3D Graphics:** Three.js
+- **Deployment:** Vercel
+
+## 🌟 Featured Events
+
+### RRR – Reconceive, Rethink, Revise
+
+- Front-end development competition
+- 41 participating teams
+- Prize pool of ₹3,000
+- Winners showcase
+
+### Game of Code 2.0
+
+- Part of BVEST
+- Multi-stage coding challenge
+- Inter-college participation
+- Technical problem-solving focus
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/dsc-site.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Feature 1](./public/feature1.png)
+_Homepage Hero Section_
 
-## Learn More
+![Feature 2](./public/feature2.png)
+_Events Timeline_
 
-To learn more about Next.js, take a look at the following resources:
+![Feature 3](./public/feature3.png)
+_Team Section_
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+We welcome contributions from the community! Please read our contributing guidelines before submitting pull requests.
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Links
+
+- [Website](https://dsc-bvcoe.vercel.app)
+- [Instagram](https://instagram.com/dsc_bvcoe)
+- [LinkedIn](https://linkedin.com/company/dsc-bvcoe)
+- [GitHub](https://github.com/dsc-bvcoe)
+
+---
+
+Made with ❤️ by Developer Students Club BVCOE
