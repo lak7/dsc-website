@@ -19,7 +19,7 @@ const navItems = [
   // { name: "About", route: "about" },
   { name: "About", route: "about" },
   { name: "Event Calendar", route: "event-calendar" },
-  { name: "Contact", route: "contact" },
+  { name: "Contact", route: "contact"},
 ];
 
 const NavBar = () => {
