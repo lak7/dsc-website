@@ -17,24 +17,6 @@ interface Event {
 
 const events: Event[] = [
   {
-    title: "Hackathon",
-    tagline: "CodeClash 2.0",
-    date: "April 2025",
-    prizePool: "₹10,000",
-    description:
-      "A thrilling tech Hackathon",
-    rounds: [
-      "Tech Pictionary",
-      "Judging",
-      "Presentation",
-    ],
-    highlights: [
-      "Fast-paced and competitive",
-      "Engaging for all skill levels",
-      "Prizes for top performers",
-    ],
-  },
-  {
     title: "Tech Knockout",
     tagline: "Rise as a Team",
     date: "3rd Week of February",
@@ -61,6 +43,24 @@ const events: Event[] = [
       "A fun twist on Tambola where participants mark tech-related terms on grids based on questions called out. Patterns like Full House, Rows, or Corners determine the winners.",
   },
   {
+    title: "Code Wars",
+    tagline: "Compete. Code. Conquer!",
+    date: "First week of April 2025",
+    prizePool: "₹5,000",
+    description:
+      "A thrilling tech competition with coding and problem-solving challenges",
+    rounds: [
+      "Tech Pictionary: Draw and guess tech-related terms",
+      "Code Hunt: Solve a simple coding puzzle",
+      "Quick Quiz: Answer rapid-fire tech trivia",
+    ],
+    highlights: [
+      "Fast-paced and competitive",
+      "Engaging for all skill levels",
+      "Prizes for top performers",
+    ],
+  },
+  {
     title: "Design Sprint Challenge",
     tagline: "Design. Build. Innovate!",
     date: "Third week of April 2025",
@@ -79,17 +79,12 @@ const events: Event[] = [
     ],
   },
   {
-    title: "Code Wars",
-    tagline: "Compete. Code. Conquer!",
-    date: "First week of April 2025",
-    prizePool: "₹5,000",
-    description:
-      "A thrilling tech competition with coding and problem-solving challenges",
-    rounds: [
-      "Tech Pictionary: Draw and guess tech-related terms",
-      "Code Hunt: Solve a simple coding puzzle",
-      "Quick Quiz: Answer rapid-fire tech trivia",
-    ],
+    title: "Hackathon",
+    tagline: "CodeClash 2.0",
+    date: "April 2025",
+    prizePool: "₹10,000",
+    description: "A thrilling tech Hackathon",
+    rounds: ["Tech Pictionary", "Judging", "Presentation"],
     highlights: [
       "Fast-paced and competitive",
       "Engaging for all skill levels",

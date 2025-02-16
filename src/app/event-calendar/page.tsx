@@ -9,7 +9,7 @@ import SocietyTimelineDemo from "./EventTimeline";
 
 const page = () => {
   return (
-    <div className="min-h-dvh bg-[#0A0A0F] text-white/90 overflow-y-auto font-light">
+    <div className="min-h-dvh bg-[#0A0A0F] text-white/90 font-light">
       <VideoBackground6 />
 
       {/* Hero Section */}

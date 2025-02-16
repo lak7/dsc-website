@@ -9,38 +9,70 @@ export function SocietyTimelineDemo() {
       title: "RRR – Reconceive, Rethink, Revise",
       content: (
         <div className="mb-24">
-          <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            A front-end development competition celebrating innovation and
-            creativity. 41 teams competed across two rounds, with the top 20
-            teams presenting their projects at the Library for a prize pool of
-            ₹3,000.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Link href="/event-calendar/RRR">
-              <Image
-                src="/rrr.jpg"
-                alt="RRR Winners"
-                width={1200}  
-                height={600} 
-                className="rounded-lg object-cover h-40 md:h-64 lg:h-52 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              />
-            </Link>
-            <div className="space-y-2">
-              <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-                🥇 Team Pixel
-              </div>
-              <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-                🥈 Team BugBuster
-              </div>
-              <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-                🥉 Team Drag & Drop
-              </div>
-              <Link
-                href="/event-calendar/RRR"
-                className="inline-block mt-4 text-blue-500 hover:text-blue-600 text-sm"
-              >
-                View Full Details →
+          <div className="flex flex-col gap-8">
+            <div className="w-full group">
+              <Link href="/event-calendar/RRR">
+                <div className="relative w-full aspect-[2.5/1] transform transition-all duration-300 group-hover:scale-[1.02]">
+                  <Image
+                    src="/rrr.jpg"
+                    alt="RRR Winners"
+                    fill
+                    className="rounded-xl object-cover shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm"
+                  />
+                </div>
               </Link>
+            </div>
+            <p className="text-neutral-300 text-sm md:text-base font-normal">
+              A front-end development competition celebrating innovation and
+              creativity. 41 teams competed across two rounds, with the top 20
+              teams presenting their projects at the Library for a prize pool of
+              ₹3,000.
+            </p>
+            <div className="relative backdrop-blur-md bg-gradient-to-r from-purple-900/10 to-blue-900/10 border border-white/10 p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+              <div className="space-y-4">
+                <h3 className="text-purple-300/90 text-base font-medium tracking-wide">
+                  Winners
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3 items-center text-neutral-200 text-sm">
+                    🥇{" "}
+                    <span className="font-medium tracking-wide hover:text-purple-300 transition-colors">
+                      Team Pixel
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-center text-neutral-200 text-sm">
+                    🥈{" "}
+                    <span className="font-medium tracking-wide hover:text-purple-300 transition-colors">
+                      Team BugBuster
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-center text-neutral-200 text-sm">
+                    🥉{" "}
+                    <span className="font-medium tracking-wide hover:text-purple-300 transition-colors">
+                      Team Drag & Drop
+                    </span>
+                  </div>
+                </div>
+                <Link
+                  href="/event-calendar/RRR"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 mt-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-sm font-medium tracking-wide transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 backdrop-blur-lg"
+                >
+                  View Full Details
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -50,41 +82,70 @@ export function SocietyTimelineDemo() {
       title: "Game of Code 2.0",
       content: (
         <div className="mb-24">
-          <p className="text-neutral-400 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Part of BVEST, DSC BVCOE and TechShuttle Society brought this
-            two-stage coding challenge that tested technical expertise and
-            problem-solving abilities of participants across multiple
-            institutions.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Link href="/event-calendar/GameOfCode">
-              <Image
-                src="/code.jpg"
-                alt="Game of Code Event"
-                width={1200}  
-                height={600} 
-                className="rounded-lg h-40 md:h-64 lg:h-52 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] object-cover"
-              />
-            </Link>
-            <div className="space-y-2">
-              <div
-                className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm 
-              "
-              >
-                🥇 Over Engineers
-              </div>
-              <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-                🥈 Chote Miya - Bade Miya
-              </div>
-              <div className="flex gap-2 items-center text-neutral-500 dark:text-neutral-300 text-xs md:text-sm">
-                🥉 Hex Questers
-              </div>
-              <Link
-                href="/event-calendar/GameOfCode"
-                className="inline-block mt-4 text-blue-500 hover:text-blue-600 text-sm"
-              >
-                View Full Details →
+          <div className="flex flex-col gap-8">
+            <div className="w-full group">
+              <Link href="/event-calendar/GameOfCode">
+                <div className="relative w-full aspect-[2.5/1] transform transition-all duration-300 group-hover:scale-[1.02]">
+                  <Image
+                    src="/code.jpg"
+                    alt="Game of Code Event"
+                    fill
+                    className="rounded-xl object-cover shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm"
+                  />
+                </div>
               </Link>
+            </div>
+            <p className="text-neutral-300 text-sm md:text-base font-normal">
+              Part of BVEST, DSC BVCOE and TechShuttle Society brought this
+              two-stage coding challenge that tested technical expertise and
+              problem-solving abilities of participants across multiple
+              institutions.
+            </p>
+            <div className="relative backdrop-blur-md bg-gradient-to-r from-purple-900/10 to-blue-900/10 border border-white/10 p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+              <div className="space-y-4">
+                <h3 className="text-purple-300/90 text-base font-medium tracking-wide">
+                  Winners
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3 items-center text-neutral-200 text-sm">
+                    🥇{" "}
+                    <span className="font-medium tracking-wide hover:text-purple-300 transition-colors">
+                      Over Engineers
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-center text-neutral-200 text-sm">
+                    🥈{" "}
+                    <span className="font-medium tracking-wide hover:text-purple-300 transition-colors">
+                      Chote Miya - Bade Miya
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-center text-neutral-200 text-sm">
+                    🥉{" "}
+                    <span className="font-medium tracking-wide hover:text-purple-300 transition-colors">
+                      Hex Questers
+                    </span>
+                  </div>
+                </div>
+                <Link
+                  href="/event-calendar/GameOfCode"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 mt-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-sm font-medium tracking-wide transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 backdrop-blur-lg"
+                >
+                  View Full Details
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
