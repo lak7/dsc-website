@@ -20,7 +20,7 @@ const events: Event[] = [
     title: "Design Sprint Challenge",
     tagline: "Design. Build. Innovate!",
     date: "Third week of April 2025",
-    prizePool: "₹5,000",
+    prizePool: "₹5k",
     description:
       "A fast-paced design competition where participants tackle real-world problems by designing solutions in a limited time frame.",
     rounds: [
@@ -38,7 +38,7 @@ const events: Event[] = [
     title: "Tech Knockout",
     tagline: "Rise as a Team",
     date: "3rd Week of February",
-    prizePool: "₹10,000",
+    prizePool: "₹5k",
     // prizeBreakdown: ["1st: ₹5,000", "2nd: ₹3,000", "3rd: ₹2,000"],
     description: "A team-based knockout competition with multiple rounds",
     rounds: [
@@ -52,7 +52,7 @@ const events: Event[] = [
     title: "Technical Bingo",
     tagline: "TechTambola: The Grid Challenge",
     date: "1st Week of March",
-    prizePool: "₹8,000",
+    prizePool: "₹5k",
     // prizeBreakdown: [
     //   "Full House: ₹4,000",
     //   "Lines/Patterns: ₹2,000 each (for two winners)",
@@ -64,7 +64,7 @@ const events: Event[] = [
     title: "Code Wars",
     tagline: "Compete. Code. Conquer!",
     date: "First week of April 2025",
-    prizePool: "₹5,000",
+    prizePool: "₹5k",
     description:
       "A thrilling tech competition with coding and problem-solving challenges",
     rounds: [
@@ -82,7 +82,7 @@ const events: Event[] = [
     title: "Hackathon",
     tagline: "CodeClash 2.0",
     date: "April 2025",
-    prizePool: "₹10,000",
+    prizePool: "₹5k",
     description: "A thrilling tech Hackathon",
     rounds: ["Tech Pictionary", "Judging", "Presentation"],
     highlights: [
