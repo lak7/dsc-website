@@ -1,6 +1,6 @@
 # Developer Students Club - BVCOE
 
-![DSC Website Banner](./public/banner.png)
+![DSC Website Banner]
 
 ## 🚀 About DSC BVCOE
 
@@ -69,7 +69,7 @@ Developer Students Club at Bharati Vidyapeeth's College of Engineering is a comm
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/dsc-site.git
+git clone https://github.com/lak7/dsc-site.git
 ```
 
 2. Install dependencies:
@@ -89,10 +89,8 @@ npm run dev
 ## 📸 Screenshots
 
 ![Feature 1](./public/feature1.png)
-_Homepage Hero Section_
 
 ![Feature 2](./public/feature2.png)
-_Events Timeline_
 
 ![Feature 3](./public/feature3.png)
 _Team Section_
