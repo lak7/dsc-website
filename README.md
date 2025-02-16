@@ -93,7 +93,7 @@ npm run dev
 ![Feature 2](./public/feature2.png)
 
 ![Feature 3](./public/feature3.png)
-_Team Section_
+
 
 ## 🤝 Contributing
 

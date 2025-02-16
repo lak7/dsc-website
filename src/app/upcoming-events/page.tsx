@@ -17,6 +17,24 @@ interface Event {
 
 const events: Event[] = [
   {
+    title: "Design Sprint Challenge",
+    tagline: "Design. Build. Innovate!",
+    date: "Third week of April 2025",
+    prizePool: "₹5,000",
+    description:
+      "A fast-paced design competition where participants tackle real-world problems by designing solutions in a limited time frame.",
+    rounds: [
+      "Ideation: Brainstorm and sketch solutions",
+      "Prototype: Build low-fidelity prototype using Figma, Canva, or paper",
+      "Presentation: Present design solution and explain process",
+    ],
+    highlights: [
+      "Fast-paced and creative",
+      "Emphasizes teamwork and innovative thinking",
+      "Prizes for impactful designs",
+    ],
+  },
+  {
     title: "Tech Knockout",
     tagline: "Rise as a Team",
     date: "3rd Week of February",
@@ -58,24 +76,6 @@ const events: Event[] = [
       "Fast-paced and competitive",
       "Engaging for all skill levels",
       "Prizes for top performers",
-    ],
-  },
-  {
-    title: "Design Sprint Challenge",
-    tagline: "Design. Build. Innovate!",
-    date: "Third week of April 2025",
-    prizePool: "₹5,000",
-    description:
-      "A fast-paced design competition where participants tackle real-world problems by designing solutions in a limited time frame.",
-    rounds: [
-      "Ideation: Brainstorm and sketch solutions",
-      "Prototype: Build low-fidelity prototype using Figma, Canva, or paper",
-      "Presentation: Present design solution and explain process",
-    ],
-    highlights: [
-      "Fast-paced and creative",
-      "Emphasizes teamwork and innovative thinking",
-      "Prizes for impactful designs",
     ],
   },
   {
