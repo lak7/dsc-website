@@ -17,11 +17,29 @@ interface Event {
 
 const events: Event[] = [
   {
+    title: "Hackathon",
+    tagline: "CodeClash 2.0",
+    date: "April 2025",
+    prizePool: "₹10,000",
+    description:
+      "A thrilling tech Hackathon",
+    rounds: [
+      "Tech Pictionary",
+      "Judging",
+      "Presentation",
+    ],
+    highlights: [
+      "Fast-paced and competitive",
+      "Engaging for all skill levels",
+      "Prizes for top performers",
+    ],
+  },
+  {
     title: "Tech Knockout",
     tagline: "Rise as a Team",
     date: "3rd Week of February",
     prizePool: "₹10,000",
-    prizeBreakdown: ["1st: ₹5,000", "2nd: ₹3,000", "3rd: ₹2,000"],
+    // prizeBreakdown: ["1st: ₹5,000", "2nd: ₹3,000", "3rd: ₹2,000"],
     description: "A team-based knockout competition with multiple rounds",
     rounds: [
       "Tech Quiz - Teams answer rapid-fire questions",
@@ -35,10 +53,10 @@ const events: Event[] = [
     tagline: "TechTambola: The Grid Challenge",
     date: "1st Week of March",
     prizePool: "₹8,000",
-    prizeBreakdown: [
-      "Full House: ₹4,000",
-      "Lines/Patterns: ₹2,000 each (for two winners)",
-    ],
+    // prizeBreakdown: [
+    //   "Full House: ₹4,000",
+    //   "Lines/Patterns: ₹2,000 each (for two winners)",
+    // ],
     description:
       "A fun twist on Tambola where participants mark tech-related terms on grids based on questions called out. Patterns like Full House, Rows, or Corners determine the winners.",
   },
@@ -149,7 +167,7 @@ const Page = () => {
       </HeroHighlight>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1  gap-6">
           {events.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}

@@ -53,14 +53,14 @@ export function DepartmentDialog({
           </p>
           <div className="flex flex-col w-full justify-between items-center">
             <figure className="w-full">
-              <figcaption className="text-2xl sm:text-3xl font-semibold my-4 sm:my-5 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
+              <figcaption className="text-2xl sm:text-3xl font-semibold my-4 sm:my-5 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 text-center">
                 Heads
               </figcaption>
               <ul
                 className={`w-full ${teams.Heads.members.length === 1
                     ? "flex justify-center items-center"
                     : "grid grid-cols-1 sm:grid-cols-2"
-                  } ${teams.Heads.members.length > 2 ? "lg:grid-cols-3" : ""
+                  } ${teams.Heads.members.length > 2 ? "lg:grid-cols-3 items-start" : ""
                   }${teams.Heads.members.length == 1 ? "lg:grid-cols-1" : ""} gap-6 sm:gap-8`}
               >
                 {teams.Heads.members?.map((head) => {
@@ -71,7 +71,7 @@ export function DepartmentDialog({
                   return (
                     <li
                       key={head}
-                      className={`flex flex-col justify-center items-center group ${isSingleMember ? "max-w-[60%] mx-auto" : "w-full"
+                      className={`flex flex-col gap-0 justify-center items-center group ${isSingleMember ? "max-w-[60%] mx-auto" : "w-full"
                         }`}
                     >
                       <div
@@ -79,18 +79,18 @@ export function DepartmentDialog({
                           }`}
                       >
                         <Image
-                          className={`object-center w-full h-full transition-transform duration-300 group-hover:scale-102 ${head === "Tanishq Raj" ? "pl-5" : ""}  `}
+                          className={`object-cover w-full h-full transition-transform duration-300 group-hover:scale-102 ${head === "Tanishq Raj" ? "pl-5" : ""}  `}
                           src={imagePath}
                           alt={`${head}-image`}
                           fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 50vw"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = "/Member/image.png";
                           }}
                         />
                       </div>
-                      <p className="text-xl sm:text-2xl mt-4 font-medium text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                        {head}
+                      <p className={`text-xl sm:text-2xl mt-1.5 font-medium text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 ${head === "Faraz Khan" ? "lg:w-16" : "" } ${head === "Vidhi Setiya" ? "lg:w-[75px]" : "" }`}>
+                       {head}
                       </p>
                     </li>
                   );
