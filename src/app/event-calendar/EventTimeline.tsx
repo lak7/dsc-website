@@ -12,7 +12,7 @@ export function SocietyTimelineDemo() {
           <div className="flex flex-col gap-8">
             <div className="w-full group">
               <Link href="/event-calendar/RRR">
-                <div className="relative w-full aspect-[2.5/1] transform transition-all duration-300 group-hover:scale-[1.02]">
+                <div className="relative w-full aspect-[3/1] transform transition-all duration-300 group-hover:scale-[1.02]">
                   <Image
                     src="/rrr.jpg"
                     alt="RRR Winners"
@@ -85,7 +85,7 @@ export function SocietyTimelineDemo() {
           <div className="flex flex-col gap-8">
             <div className="w-full group">
               <Link href="/event-calendar/GameOfCode">
-                <div className="relative w-full aspect-[2.5/1] transform transition-all duration-300 group-hover:scale-[1.02]">
+                <div className="relative w-full aspect-[3/1] transform transition-all duration-300 group-hover:scale-[1.02]">
                   <Image
                     src="/code.jpg"
                     alt="Game of Code Event"
