@@ -41,7 +41,7 @@ export const teamMembers: TeamMember[] = [
     name: "Lakshay Gupta",
     role: "Technical Lead",
     bio: "As the Technical Lead for DSC, Lakshay plays a pivotal role in driving the technical direction of the society's projects, utilizing his strong foundation in programming and development.His collaborative approach and deep technical expertise make him an integral part of the team.",
-    imageUrl: "/lakshay.png",
+    imageUrl: "/lakshay.jpg",
   },
   {
     id: 6,
