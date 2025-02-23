@@ -10,8 +10,6 @@ import {
   PenTool,
   Users,
 } from "lucide-react";
-// import { DepartmentCard } from "./department-card";
-// import { DepartmentDialog } from "./department-dialog";
 import { DepartmentCard } from "./department-card";
 import { DepartmentDialog } from "./department-dialog";
 import { VideoBackground6 } from "@/components/common/VideoBackground";
