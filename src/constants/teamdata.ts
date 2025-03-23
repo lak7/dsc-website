@@ -9,7 +9,7 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Dr. Alka Leeka",
+    name: "Dr. Alka Leekha",
     role: "Faculty Incharge",
     bio: "Dr. Alka Leekha, a distinguished Associate Professor with 21+ years of teaching experience, holds a Ph.D. in Computer and Information Sciences. She specializes in Data Security, Cloud Computing, Big Data Analytics, and Computer Vision, and has taught courses like Cryptography and Software Engineering. Her dedication and expertise make her an inspiring leader and the ideal Faculty In-Charge for DSC.",
     imageUrl: "/alka.png",

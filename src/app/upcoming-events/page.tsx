@@ -32,26 +32,26 @@ const events: Event[] = [
   //     "Collaborative environment",
   //   ],
   // },
+  // {
+  //   title: "Tech Knockout",
+  //   tagline: "Rise as a Team",
+  //   prizePool: "₹5k",
+  //   description: "A team-based knockout competition with multiple rounds.",
+  //   rounds: [
+  //     "Tech Quiz - Teams answer rapid-fire questions",
+  //     "Debugging Challenge - Find and fix code errors quickly",
+  //     "Final Build - Teams create a small, innovative solution",
+  //   ],
+  //   highlights: [
+  //     "Quick decision-making",
+  //     "Effective communication",
+  //     "Competitive spirit",
+  //   ],
+  // },
   {
-    title: "Tech Knockout",
-    tagline: "Rise as a Team",
-    prizePool: "₹5k",
-    description: "A team-based knockout competition with multiple rounds.",
-    rounds: [
-      "Tech Quiz - Teams answer rapid-fire questions",
-      "Debugging Challenge - Find and fix code errors quickly",
-      "Final Build - Teams create a small, innovative solution",
-    ],
-    highlights: [
-      "Quick decision-making",
-      "Effective communication",
-      "Competitive spirit",
-    ],
-  },
-  {
-    title: "Technical Bingo",
+    title: "TechBola",
     tagline: "TechTambola: The Grid Challenge",
-    prizePool: "₹5k",
+    prizePool: "₹1k",
     description:
       "A fun twist on Tambola where participants mark tech-related terms on grids based on questions called out. Patterns like Full House, Rows, or Corners determine the winners.",
     highlights: [
@@ -60,27 +60,27 @@ const events: Event[] = [
       "Exciting rewards",
     ],
   },
+  // {
+  //   title: "Code Wars",
+  //   tagline: "Compete. Code. Conquer!",
+  //   prizePool: "₹5k",
+  //   description:
+  //     "A thrilling tech competition with coding and problem-solving challenges.",
+  //   rounds: [
+  //     "Tech Pictionary: Draw and guess tech-related terms",
+  //     "Code Hunt: Solve a simple coding puzzle",
+  //     "Quick Quiz: Answer rapid-fire tech trivia",
+  //   ],
+  //   highlights: [
+  //     "Showcase coding prowess",
+  //     "Stimulating problem-solving tasks",
+  //     "Fun with tech challenges",
+  //   ],
+  // },
   {
-    title: "Code Wars",
-    tagline: "Compete. Code. Conquer!",
-    prizePool: "₹5k",
-    description:
-      "A thrilling tech competition with coding and problem-solving challenges.",
-    rounds: [
-      "Tech Pictionary: Draw and guess tech-related terms",
-      "Code Hunt: Solve a simple coding puzzle",
-      "Quick Quiz: Answer rapid-fire tech trivia",
-    ],
-    highlights: [
-      "Showcase coding prowess",
-      "Stimulating problem-solving tasks",
-      "Fun with tech challenges",
-    ],
-  },
-  {
-    title: "Hackathon",
-    tagline: "CodeClash 2.0",
-    prizePool: "₹5k",
+    title: "CodeClash 2.0",
+    tagline: "CodeClash is back with its second edition, promising bigger challenges, better rewards, and an electrifying hackathon experience",
+    prizePool: "₹100k",
     description: "An intensive coding marathon to build innovative solutions.",
     rounds: ["Tech Pictionary", "Judging", "Presentation"],
     highlights: [
