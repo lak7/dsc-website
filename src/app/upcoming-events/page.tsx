@@ -48,18 +48,18 @@ const events: Event[] = [
   //     "Competitive spirit",
   //   ],
   // },
-  {
-    title: "TechBola",
-    tagline: "TechTambola: The Grid Challenge",
-    prizePool: "₹1k",
-    description:
-      "A fun twist on Tambola where participants mark tech-related terms on grids based on questions called out. Patterns like Full House, Rows, or Corners determine the winners.",
-    highlights: [
-      "Interactive gameplay",
-      "Test tech knowledge playfully",
-      "Exciting rewards",
-    ],
-  },
+  // {
+  //   title: "TechBola",
+  //   tagline: "TechTambola: The Grid Challenge",
+  //   prizePool: "₹1k",
+  //   description:
+  //     "A fun twist on Tambola where participants mark tech-related terms on grids based on questions called out. Patterns like Full House, Rows, or Corners determine the winners.",
+  //   highlights: [
+  //     "Interactive gameplay",
+  //     "Test tech knowledge playfully",
+  //     "Exciting rewards",
+  //   ],
+  // },
   // {
   //   title: "Code Wars",
   //   tagline: "Compete. Code. Conquer!",
