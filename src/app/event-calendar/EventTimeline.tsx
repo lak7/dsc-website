@@ -6,6 +6,51 @@ import Link from "next/link";
 export function SocietyTimelineDemo() {
   const data = [
     {
+      title: "TechBola",
+      content: (
+        <div className="mb-24">
+          <div className="flex flex-col gap-8">
+            <div className="w-full group">
+              <Link href="/event-calendar/TechBola">
+                <div className="relative w-full aspect-[3/1] transform transition-all duration-300 group-hover:scale-[1.02]">
+                  <Image
+                    src="/TechBola.jpeg"
+                    alt="TechBola"
+                    fill
+                    className="rounded-xl object-cover shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm"
+                  />
+                </div>
+              </Link>
+            </div>
+            <h5 className="text-neutral-290 text-sm md:text-base font-normal">
+            TechBola was an exciting coding quiz with a unique Tambola twist, where participants solved programming challenges while playing a strategic number game, making learning fun and competitive!
+            </h5>
+            <div className="flex justify-center">
+              <Link
+                href="/event-calendar/TechBola"
+                className="inline-flex items-center gap-2 py-2.5 px-6 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-sm font-medium tracking-wide transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 backdrop-blur-lg"
+              >
+                View More
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Design Sprint - UXthon",
       content: (
         <div className="mb-24">
