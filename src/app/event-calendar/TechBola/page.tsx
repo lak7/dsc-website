@@ -1,5 +1,4 @@
 "use client";
-
 import VideoBackground from "@/components/common/VideoBackground";
 import EventDetails from "../EventDetails";
 
@@ -31,9 +30,9 @@ const TechBola = () => {
               "Exciting Rewards – Winners showcased their coding Expertise and game strategy to claim top prizes.",
             ]}
             winners={[
-              { position: "🥇", name: "Aditya Tyagi" ,image:"#"},
-              { position: "🥈", name: "Kirthika", image:"#" },
-              { position: "🥉", name: "Ayush Mittal", image:"#" },
+              { position: "🥇", name: "Aditya Tyagi", image: "#" },
+              { position: "🥈", name: "Kirthika", image: "#" },
+              { position: "🥉", name: "Ayush Mittal", image: "#" },
               { position: "#", name: "TechBola Event", image: "/TechBola2.jpeg" },
             ]}
           />
