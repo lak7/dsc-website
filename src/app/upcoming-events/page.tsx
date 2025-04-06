@@ -79,7 +79,8 @@ const events: Event[] = [
   // },
   {
     title: "CodeClash 2.0",
-    tagline: "CodeClash is back with its second edition, promising bigger challenges, better rewards, and an electrifying hackathon experience",
+    tagline:
+      "CodeClash is back with its second edition, promising bigger challenges, better rewards, and an electrifying hackathon experience",
     prizePool: "₹100k",
     description: "An intensive coding marathon to build innovative solutions.",
     rounds: ["Tech Pictionary", "Judging", "Presentation"],
@@ -92,12 +93,19 @@ const events: Event[] = [
 ];
 
 const EventCard = ({ event }: { event: Event }) => {
+  const handleClick = () => {
+    if (event.title === "CodeClash 2.0") {
+      window.open("https://www.codeclash.in", "_blank");
+    }
+  };
+
   return (
     <motion.div
+      onClick={handleClick}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-all"
+      className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-all cursor-pointer"
     >
       <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
         {event.title}

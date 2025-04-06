@@ -51,26 +51,24 @@ const EventDetails = ({ title, subtitle, description, highlights, winners }) => 
           ))}
         </div>
 
-        {/* 👥 TechBola Participants Section */}
+        {/* 👥 TechBola Event Card + Participants Heading */}
         {extraWinners.length > 0 && (
-          <div className="mt-10">
-            <h3 className="text-xl font-semibold mb-6 text-white text-center">
+          <div className="mt-10 flex flex-col items-center justify-center">
+            <div className="bg-white/5 p-4 rounded-2xl shadow-lg flex flex-col items-center justify-center text-center backdrop-blur-md border border-white/10 w-[250px]">
+              <h3 className="text-lg font-medium text-white mb-3">TechBola Event</h3>
+              {extraWinners[0].image && extraWinners[0].image !== "#" && (
+                <Image
+                  src={extraWinners[0].image}
+                  alt={extraWinners[0].name}
+                  width={160}
+                  height={160}
+                  className="rounded-lg object-cover"
+                />
+              )}
+            </div>
+            <h3 className="text-xl font-semibold mt-6 text-white text-center">
               TechBola Participants
             </h3>
-            <div className="flex justify-center">
-              <div className="bg-white/5 p-4 rounded-2xl shadow-lg flex flex-col items-center justify-center text-center backdrop-blur-md border border-white/10 w-[250px]">
-                {extraWinners[0].image && extraWinners[0].image !== "#" && (
-                  <Image
-                    src={extraWinners[0].image}
-                    alt={extraWinners[0].name}
-                    width={160}
-                    height={160}
-                    className="rounded-lg object-cover mb-3"
-                  />
-                )}
-                <h3 className="text-lg font-medium text-white">{extraWinners[0].name}</h3>
-              </div>
-            </div>
           </div>
         )}
       </div>
